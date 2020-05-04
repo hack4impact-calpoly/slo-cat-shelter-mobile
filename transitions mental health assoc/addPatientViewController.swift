@@ -11,19 +11,13 @@ import UIKit
 class addPatientViewController: UIViewController {
     
     //MARK: properties
+
+    @IBOutlet weak var nametextfield: UITextField!
+    @IBOutlet weak var gendersegmentedcntrl: UISegmentedControl!
     
-    @IBOutlet weak var lnameTextField: UITextField!
-    @IBOutlet weak var fnameTextField: UITextField!
-    
-    @IBOutlet weak var birthdayTextField: UITextField!
-    @IBOutlet weak var locationTextField: UITextField!
-    @IBOutlet weak var phoneTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var notesTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-               
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -43,15 +37,10 @@ class addPatientViewController: UIViewController {
         }
     }
     
-    @IBAction func submitClick(_ sender: Any) {
-        if(fnameTextField.hasText && lnameTextField.hasText && birthdayTextField.hasText && locationTextField.hasText && phoneTextField.hasText && emailTextField.hasText){
-            let fname = fnameTextField.text ?? "not provided"
-            let lname = lnameTextField.text ?? "not provided"
-            let bday = birthdayTextField.text ?? "not provided"
-            let loc = locationTextField.text ?? "not provided"
-            let phone = phoneTextField.text ?? "not provided"
-            let email = emailTextField.text ?? "not provided"
-            let notes = notesTextView.text ?? "not provided"
+    
+    /*@IBAction func submitClick(_ sender: Any) {
+        if(){
+            
             let url = URL(string: "https://tmha-backend.herokuapp.com/api/clients/")
             guard let requestURL = url else {
                 fatalError()
@@ -90,6 +79,6 @@ class addPatientViewController: UIViewController {
         }
         
         
-    }
+    }*/
     
 }
