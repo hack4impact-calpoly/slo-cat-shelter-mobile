@@ -24,11 +24,11 @@
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
-                                <state key="normal" image="person" catalog="system">
+                                <state key="normal" image="plus" catalog="system">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Patient Data">
+                                        <fragment content="Add Cat">
                                             <attributes>
-                                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="15" name="EuphemiaUCAS"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
@@ -391,6 +391,9 @@
                                                 <integer key="value" value="7"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="submitPressed:" destination="ENw-R5-EJh" eventType="touchUpInside" id="Dhl-QH-TZk"/>
+                                        </connections>
                                     </button>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfC-KM-xUe">
                                         <rect key="frame" x="8" y="40" width="358" height="463"/>
@@ -399,7 +402,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="358" height="2500"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xZR-s3-AZp">
-                                                        <rect key="frame" x="8" y="0.0" width="350" height="2238.5"/>
+                                                        <rect key="frame" x="8" y="0.0" width="350" height="2400.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Kg6-Dv-ljp">
                                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="34"/>
@@ -432,8 +435,8 @@
                                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YD3-N5-aVB">
                                                                         <rect key="frame" x="93" y="0.0" width="257" height="32"/>
                                                                         <segments>
-                                                                            <segment title="Male"/>
-                                                                            <segment title="Female"/>
+                                                                            <segment title="M"/>
+                                                                            <segment title="F"/>
                                                                         </segments>
                                                                     </segmentedControl>
                                                                 </subviews>
@@ -450,7 +453,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="5" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ibp-KG-2j0">
                                                                         <rect key="frame" x="71.5" y="0.0" width="43.5" height="34"/>
                                                                         <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="16"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                     </textField>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMe-D3-f6q">
                                                                         <rect key="frame" x="135" y="0.0" width="46" height="34"/>
@@ -727,7 +730,7 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kok-Ia-gWK">
+                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kok-Ia-gWK">
                                                                         <rect key="frame" x="0.0" y="29" width="350" height="128"/>
                                                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
@@ -755,16 +758,37 @@
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TZK-fc-bqV">
-                                                                <rect key="frame" x="0.0" y="1914.5" width="350" height="157"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OYB-QW-1le">
+                                                                <rect key="frame" x="0.0" y="1914.5" width="350" height="152"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNg-mz-gdZ">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional traits (optional):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfD-cX-Dhz">
                                                                         <rect key="frame" x="0.0" y="0.0" width="350" height="24"/>
                                                                         <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="18"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QP9-31-08w">
+                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lsr-V0-2T6">
+                                                                        <rect key="frame" x="0.0" y="24" width="350" height="128"/>
+                                                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="128" id="i2X-M1-bF7"/>
+                                                                        </constraints>
+                                                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                    </textView>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TZK-fc-bqV">
+                                                                <rect key="frame" x="0.0" y="2076.5" width="350" height="157"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments (optional):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNg-mz-gdZ">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="350" height="24"/>
+                                                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="18"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QP9-31-08w">
                                                                         <rect key="frame" x="0.0" y="29" width="350" height="128"/>
                                                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
@@ -782,15 +806,15 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BV8-Fk-sD5">
-                                                                <rect key="frame" x="0.0" y="2081.5" width="350" height="157"/>
+                                                                <rect key="frame" x="0.0" y="2243.5" width="350" height="157"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Experience:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huy-A5-IHC">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Experience (optional):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huy-A5-IHC">
                                                                         <rect key="frame" x="0.0" y="0.0" width="350" height="24"/>
                                                                         <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="18"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ttH-pZ-fVd">
+                                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ttH-pZ-fVd">
                                                                         <rect key="frame" x="0.0" y="29" width="350" height="128"/>
                                                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
@@ -851,8 +875,26 @@
                         <viewLayoutGuide key="safeArea" id="Ar3-9G-jla"/>
                     </view>
                     <connections>
-                        <outlet property="gendersegmentedcntrl" destination="YD3-N5-aVB" id="ykR-Zq-P3g"/>
-                        <outlet property="nametextfield" destination="D2Y-fF-ida" id="Msc-BV-mxJ"/>
+                        <outletCollection property="formTextFields" destination="D2Y-fF-ida" collectionClass="NSMutableArray" id="vO4-Xc-ACe"/>
+                        <outletCollection property="formTextFields" destination="Ibp-KG-2j0" collectionClass="NSMutableArray" id="LIO-94-uNF"/>
+                        <outletCollection property="formTextFields" destination="4nG-c9-jV8" collectionClass="NSMutableArray" id="3F8-sP-5PX"/>
+                        <outletCollection property="formTextFields" destination="NdA-JM-egs" collectionClass="NSMutableArray" id="v01-3b-Spz"/>
+                        <outletCollection property="formSegCntrls" destination="YD3-N5-aVB" collectionClass="NSMutableArray" id="aiM-MF-PnT"/>
+                        <outletCollection property="formSegCntrls" destination="kYR-Tj-x8E" collectionClass="NSMutableArray" id="Tg0-tS-8y0"/>
+                        <outletCollection property="formSegCntrls" destination="FKE-K6-4zl" collectionClass="NSMutableArray" id="1PI-Ef-saS"/>
+                        <outletCollection property="formSegCntrls" destination="tK4-D0-o6O" collectionClass="NSMutableArray" id="svd-hP-E4V"/>
+                        <outletCollection property="formTextViews" destination="DPE-uk-3a6" collectionClass="NSMutableArray" id="Vau-Q8-wg0"/>
+                        <outletCollection property="formTextViews" destination="FX9-ID-x8S" collectionClass="NSMutableArray" id="JPP-A9-Fst"/>
+                        <outletCollection property="formTextViews" destination="B9y-on-YRi" collectionClass="NSMutableArray" id="Z2n-uO-Wv8"/>
+                        <outletCollection property="formTextViews" destination="7SE-U7-4Da" collectionClass="NSMutableArray" id="02r-n1-p7J"/>
+                        <outletCollection property="formTextViews" destination="kok-Ia-gWK" collectionClass="NSMutableArray" id="D30-ey-UTf"/>
+                        <outletCollection property="formTextViews" destination="Lsr-V0-2T6" collectionClass="NSMutableArray" id="zSb-LP-nKD"/>
+                        <outletCollection property="formTextViews" destination="QP9-31-08w" collectionClass="NSMutableArray" id="7jJ-HM-SDR"/>
+                        <outletCollection property="formTextViews" destination="ttH-pZ-fVd" collectionClass="NSMutableArray" id="5ZY-Jp-nuX"/>
+                        <outletCollection property="formDatePickers" destination="kjf-Gm-orX" collectionClass="NSMutableArray" id="rc4-s6-Oqs"/>
+                        <outletCollection property="formDatePickers" destination="G4z-6d-5UQ" collectionClass="NSMutableArray" id="YZ8-1o-PT1"/>
+                        <outletCollection property="formDatePickers" destination="K5f-GI-G2o" collectionClass="NSMutableArray" id="QkZ-5V-zti"/>
+                        <outletCollection property="formDatePickers" destination="Jq4-uA-d7e" collectionClass="NSMutableArray" id="GMM-Ra-G8C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahg-Lq-OEk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -862,7 +904,7 @@
     </scenes>
     <resources>
         <image name="message" catalog="system" width="128" height="113"/>
-        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="tray" catalog="system" width="128" height="88"/>
     </resources>
 </document>
