@@ -42,9 +42,9 @@ class ViewController: UIViewController {
         patientDataButton.tag = 3
         patientDataButton.isSelected = false
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        
-        view.addGestureRecognizer(tap)
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+//        
+//        view.addGestureRecognizer(tap)
         
         //init which view shown
         dashboardContainerView.alpha = 1

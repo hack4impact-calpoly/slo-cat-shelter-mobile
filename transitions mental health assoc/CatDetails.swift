@@ -8,7 +8,8 @@
 
 import SwiftUI
 import URLImage
-let BASE_IMAGE_URL = "https://image.tmdb.org/t/p/original/"
+let BASE_IMAGE_URL = "https://cpcp-cats.herokuapp.com/api/files/?format=json"
+//https://cpcp-cats.herokuapp.com/api/files/?cat_id=0
 struct CatDetails : View {
     var cat: Cat
     var body: some View {
@@ -17,11 +18,11 @@ struct CatDetails : View {
         VStack {
             Spacer()
             Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
-            Spacer()
+          //  Spacer()
+          //  Spacer()
+          //  Spacer()
+           // Spacer()
+           // Spacer()
             VStack(alignment: .center) {
                 Group {
                     Spacer()
@@ -33,8 +34,9 @@ struct CatDetails : View {
 //                                        .frame(width: UIScreen.main.bounds.height/8*3, height: UIScreen.main.bounds.height/2)
 //                                }
                         Text(cat.name).font(.largeTitle)
+                       
 //                        }
-                    }
+                    }.padding(8)
                     HStack(alignment: .top) {
                         Text("Age:").font(.subheadline).bold()
                         Text(String(cat.age))
@@ -198,7 +200,8 @@ struct CatDetails : View {
         }
         .padding()
         .navigationBarTitle(Text(cat.name), displayMode: .inline)
-        .background(Color.blue.opacity(0.3))
+       // .background(Color.bluecat.opacity(0.3)) 95,169,218
+            .background(Color(red: 0.37, green: 0.66, blue: 0.85))
         .edgesIgnoringSafeArea(.all)
         
     }

@@ -25,7 +25,7 @@ struct ContentView : View {
                                 //List(viewmodel.cats.results) { cat in
                                 NavigationLink(destination: CatDetails(cat: cat)){
                                     CatRow(cat: cat)
-                                }
+                                }.buttonStyle(PlainButtonStyle())
                             }
                         //Spacer()
                         //Spacer()

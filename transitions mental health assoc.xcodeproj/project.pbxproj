@@ -16,6 +16,7 @@
 		E413711A246BBE8F00E3A2AF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4137119246BBE8F00E3A2AF /* NetworkManager.swift */; };
 		E413711C246BC07800E3A2AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E413711B246BC07800E3A2AF /* ContentView.swift */; };
 		E413711E246BC10B00E3A2AF /* CatDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E413711D246BC10B00E3A2AF /* CatDetails.swift */; };
+		E4294A50246DAFBF00AC46AE /* icons8-kitty-50.png in Resources */ = {isa = PBXBuildFile; fileRef = E4294A4F246DAFBF00AC46AE /* icons8-kitty-50.png */; };
 		E44104AB246A3D800046F4E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09422EB223C547EC00318C03 /* Main.storyboard */; };
 		E44D5E9C246A0BA800807EE5 /* containertesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44D5E95246A0BA700807EE5 /* containertesting.swift */; };
 		E44D5E9F246A0BA800807EE5 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E44D5E98246A0BA700807EE5 /* Base.lproj */; };
@@ -48,6 +49,7 @@
 		E4137119246BBE8F00E3A2AF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E413711B246BC07800E3A2AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E413711D246BC10B00E3A2AF /* CatDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetails.swift; sourceTree = "<group>"; };
+		E4294A4F246DAFBF00AC46AE /* icons8-kitty-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-kitty-50.png"; path = "Assets.xcassets/Image.imageset/icons8-kitty-50.png"; sourceTree = "<group>"; };
 		E44D5E95246A0BA700807EE5 /* containertesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = containertesting.swift; sourceTree = "<group>"; };
 		E44D5E98246A0BA700807EE5 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		E44D5E99246A0BA700807EE5 /* Cat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				E44D5E9A246A0BA700807EE5 /* test2.swift */,
 				E4137117246BBE0500E3A2AF /* CatList.swift */,
 				09422EB223C547EC00318C03 /* Main.storyboard */,
+				E4294A4F246DAFBF00AC46AE /* icons8-kitty-50.png */,
 				09422EB723C547EF00318C03 /* LaunchScreen.storyboard */,
 				09422EBA23C547EF00318C03 /* Info.plist */,
 				0907DA91243D74E000845D96 /* dashboardViewController.swift */,
@@ -202,6 +205,7 @@
 			files = (
 				E44104AB246A3D800046F4E7 /* Main.storyboard in Resources */,
 				E44D5E9F246A0BA800807EE5 /* Base.lproj in Resources */,
+				E4294A50246DAFBF00AC46AE /* icons8-kitty-50.png in Resources */,
 				E44D5EA2246A0BA800807EE5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

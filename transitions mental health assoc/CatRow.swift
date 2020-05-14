@@ -14,7 +14,7 @@ struct CatRow : View {
     
     var body: some View {
         //        HStack {
-        //            URLImage(URL(string:  "\(BASE_IMAGE_URL)\(cat.image_path)")!, delay: 0.25) { proxy in
+        //            URLImage(URL(string:  "\(BASE_IMAGE_URL)\(cat.id)")!, delay: 0.25) { proxy in
         //                proxy.image.resizable()
         //                    .frame(width: 90, height: 120)
         //
