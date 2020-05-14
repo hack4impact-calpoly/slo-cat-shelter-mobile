@@ -1,0 +1,6 @@
+framework module Pods_transitions_mental_health_assoc {
+  umbrella header "Pods-transitions mental health assoc-umbrella.h"
+
+  export *
+  module * { export * }
+}

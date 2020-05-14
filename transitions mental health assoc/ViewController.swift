@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
 
@@ -25,6 +26,7 @@ class ViewController: UIViewController {
     
     var currentButton = 1
     
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,8 +50,9 @@ class ViewController: UIViewController {
         dashboardContainerView.alpha = 1
         messagesContainerView.alpha = 0
         patientDataContainerView.alpha = 0
+        
     }
-
+    
     
     //MARK: functions
     //switch between child container views with button presses
