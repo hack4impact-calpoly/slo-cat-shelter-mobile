@@ -13,7 +13,6 @@
 		09422EAF23C547EC00318C03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09422EAE23C547EC00318C03 /* SceneDelegate.swift */; };
 		09422EB123C547EC00318C03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09422EB023C547EC00318C03 /* ViewController.swift */; };
 		095813BD2446D1F10024DD5C /* addPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095813BC2446D1F10024DD5C /* addPatientViewController.swift */; };
-		09A989E62479E9AC00672DF4 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A989E52479E9AC00672DF4 /* CollectionViewController.swift */; };
 		E4137118246BBE0500E3A2AF /* CatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4137117246BBE0500E3A2AF /* CatList.swift */; };
 		E413711A246BBE8F00E3A2AF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4137119246BBE8F00E3A2AF /* NetworkManager.swift */; };
 		E413711C246BC07800E3A2AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E413711B246BC07800E3A2AF /* ContentView.swift */; };
@@ -23,6 +22,7 @@
 		E44D5E9F246A0BA800807EE5 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E44D5E98246A0BA700807EE5 /* Base.lproj */; };
 		E44D5EA0246A0BA800807EE5 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44D5E99246A0BA700807EE5 /* Cat.swift */; };
 		E44D5EA2246A0BA800807EE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E44D5E9B246A0BA700807EE5 /* Assets.xcassets */; };
+		E4BFCCF7247B893D0031ABA3 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BFCCF6247B893D0031ABA3 /* CollectionViewController.swift */; };
 		E4C1AD48246BC2F60024AE69 /* CatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C1AD47246BC2F60024AE69 /* CatRow.swift */; };
 		E4C1AD4A246C4CC50024AE69 /* URLImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C1AD49246C4CC50024AE69 /* URLImage.framework */; };
 		E4C1AD4C246C4CD10024AE69 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C1AD4B246C4CD10024AE69 /* Alamofire.framework */; };
@@ -43,7 +43,6 @@
 		09422EB823C547EF00318C03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09422EBA23C547EF00318C03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		095813BC2446D1F10024DD5C /* addPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPatientViewController.swift; sourceTree = "<group>"; };
-		09A989E52479E9AC00672DF4 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewController.swift; path = "/Users/finpiroth/Desktop/hack4Impact/SLO_cat_shelter_mobile/transitions mental health assoc/CollectionViewController.swift"; sourceTree = "<absolute>"; };
 		519CF78D93E47395CE52865D /* Pods-transitions mental health assoc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-transitions mental health assoc.release.xcconfig"; path = "Target Support Files/Pods-transitions mental health assoc/Pods-transitions mental health assoc.release.xcconfig"; sourceTree = "<group>"; };
 		7E7CBC2DD793B98075CD8FDB /* Pods_transitions_mental_health_assoc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_transitions_mental_health_assoc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E20AC55CC30DDB45247FCBE8 /* Pods-transitions mental health assoc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-transitions mental health assoc.debug.xcconfig"; path = "Target Support Files/Pods-transitions mental health assoc/Pods-transitions mental health assoc.debug.xcconfig"; sourceTree = "<group>"; };
@@ -55,6 +54,7 @@
 		E44D5E98246A0BA700807EE5 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		E44D5E99246A0BA700807EE5 /* Cat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		E44D5E9B246A0BA700807EE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E4BFCCF6247B893D0031ABA3 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		E4C1AD47246BC2F60024AE69 /* CatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatRow.swift; sourceTree = "<group>"; };
 		E4C1AD49246C4CC50024AE69 /* URLImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = URLImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C1AD4B246C4CD10024AE69 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,7 +98,7 @@
 		09422EAB23C547EC00318C03 /* transitions mental health assoc */ = {
 			isa = PBXGroup;
 			children = (
-				09A989E52479E9AC00672DF4 /* CollectionViewController.swift */,
+				E4BFCCF6247B893D0031ABA3 /* CollectionViewController.swift */,
 				09422EAC23C547EC00318C03 /* AppDelegate.swift */,
 				09422EAE23C547EC00318C03 /* SceneDelegate.swift */,
 				09422EB023C547EC00318C03 /* ViewController.swift */,
@@ -263,11 +263,11 @@
 				09422EB123C547EC00318C03 /* ViewController.swift in Sources */,
 				09422EAD23C547EC00318C03 /* AppDelegate.swift in Sources */,
 				095813BD2446D1F10024DD5C /* addPatientViewController.swift in Sources */,
-				09A989E62479E9AC00672DF4 /* CollectionViewController.swift in Sources */,
 				E4C1AD4E246C50820024AE69 /* ServiceProtocol.swift in Sources */,
 				E44D5EA0246A0BA800807EE5 /* Cat.swift in Sources */,
 				09422EAF23C547EC00318C03 /* SceneDelegate.swift in Sources */,
 				E4C1AD50246C512F0024AE69 /* CatViewModel.swift in Sources */,
+				E4BFCCF7247B893D0031ABA3 /* CollectionViewController.swift in Sources */,
 				E413711A246BBE8F00E3A2AF /* NetworkManager.swift in Sources */,
 				E4C1AD48246BC2F60024AE69 /* CatRow.swift in Sources */,
 				0907DA92243D74E000845D96 /* dashboardViewController.swift in Sources */,

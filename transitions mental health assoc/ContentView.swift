@@ -34,7 +34,7 @@ struct ContentView : View {
                     }
                     else {
                         VStack(alignment: .center) {
-                            Text("No cats or error")
+                            Text("No cats")
                         }
                     }
                     

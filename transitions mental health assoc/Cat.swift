@@ -39,7 +39,12 @@ struct Cat: Decodable, Identifiable, Hashable {
         case comments
         case personalExp = "personal_exp"
     }
+
+    
 }
+
+
+
 
 typealias CatList2 = [Cat]
 
