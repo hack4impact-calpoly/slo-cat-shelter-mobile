@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aKN-Wf-Wc2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -8,6 +8,69 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="xXa-1M-EaQ">
+            <objects>
+                <navigationController id="aKN-Wf-Wc2" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i47-wp-5mm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5Hu-kA-L8X" kind="relationship" relationship="rootViewController" id="kr9-Ux-kCd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azF-pL-cXr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2294" y="79"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="1YW-Re-u4S">
+            <objects>
+                <viewController title="Login" id="5Hu-kA-L8X" customClass="LoginViewController" customModule="transitions_mental_health_assoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Vn-8V-Z3d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tcq-Ry-aNj">
+                                <rect key="frame" x="82" y="408" width="250" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5Hu-kA-L8X" id="5Ha-rq-u2o"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gvZ-hk-tKv">
+                                <rect key="frame" x="82" y="462" width="250" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5Hu-kA-L8X" id="dge-Lo-zm6"/>
+                                </connections>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2020-06-10 at 4.22.52 PM" translatesAutoresizingMaskIntoConstraints="NO" id="YdI-Yz-AKM">
+                                <rect key="frame" x="35" y="149" width="345" height="221"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.86639255289999995" green="0.9471085668" blue="0.97120600940000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.86639255289999995" green="0.9471085668" blue="0.97120600940000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.4424934089" green="0.78450930119999995" blue="0.89219754929999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="nzY-hf-d2z"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mP5-tE-GqW"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="gvZ-hk-tKv" id="Qbh-bW-bJA"/>
+                        <outlet property="usernameTextField" destination="tcq-Ry-aNj" id="skR-8p-2qt"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="loginToDashboard" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="1CC-6k-aTx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aYN-Bu-j7E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1465.217391304348" y="-205.58035714285714"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -148,6 +211,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="B7g-v2-wN3"/>
                     <connections>
                         <outlet property="dashboardButton" destination="hb7-Pa-chV" id="v7e-yT-P6d"/>
                         <outlet property="dashboardContainerView" destination="nOm-yQ-c5x" id="8FV-Ot-zCY"/>
@@ -328,6 +392,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eU9-IF-ICO"/>
                     </view>
+                    <navigationItem key="navigationItem" id="at6-iw-Mlm"/>
                     <connections>
                         <outlet property="eventComments" destination="3FN-50-AtR" id="aoc-Ea-EOg"/>
                         <outlet property="eventDate" destination="tkg-5H-qcZ" id="24t-FK-M3S"/>
@@ -1017,6 +1082,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Screen Shot 2020-06-10 at 4.22.52 PM" width="414" height="398"/>
         <image name="icons8-kitty-50.png" width="21.600000381469727" height="21.600000381469727"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="tray" catalog="system" width="128" height="88"/>
