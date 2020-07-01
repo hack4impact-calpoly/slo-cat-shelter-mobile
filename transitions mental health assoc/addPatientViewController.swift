@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 var globalkeys: [Int] = []
 
@@ -73,8 +74,10 @@ class addPatientViewController: UIViewController {
         for num in globalkeys {
             postString += "&personality=\(num+1)"
         }
-        
         request.httpBody = postString.data(using: String.Encoding.utf8)
+        
+        request.setValue(User.current.token, forHTTPHeaderField: "Authorization") //dont know if this works yet
+        
         let task = URLSession(configuration: URLSessionConfiguration.default).dataTask(with: request) {(data, response, error) in
             if let error = error {
                 print("Error occured \(error)")
