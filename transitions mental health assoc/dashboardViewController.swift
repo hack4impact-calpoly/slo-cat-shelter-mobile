@@ -7,19 +7,21 @@
 //
 
 import UIKit
+import Alamofire
 
 class dashboardViewController: UIViewController {
     
     //MARK: properties
-    
-    @IBOutlet weak var eventComments: UITextView!
-    @IBOutlet weak var eventTime: UITextField!
-    @IBOutlet weak var eventDate: UITextField!
-    @IBOutlet weak var eventType: UISegmentedControl!
-    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var catidTextField: UITextField!
+    @IBOutlet weak var aptTypeSegCntrl: UISegmentedControl!
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var timePicker: UIDatePicker!
+    @IBOutlet weak var notesTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //the following nasty code is to bump everything up so that the keyboard doesn't block input fields, and bump it back down when keyboard is gone
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
@@ -29,10 +31,6 @@ class dashboardViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     //MARK: functions
-    
-    @IBAction func submitPressed(_ sender: UIButton) {
-        /*let curEvent = Event.init(type: eventType.titleForSegment(at: eventType.selectedSegmentIndex), date: eventDate.text, time: eventTime.text, comments: eventComments.text)*/
-    }
     
     @objc func dismissKeyboard (){
         view.endEditing(true)
@@ -52,10 +50,37 @@ class dashboardViewController: UIViewController {
         }
     }
     
-    struct Event {
-        var type: String?
-        var date: String?
-        var time: String?
-        var comments: String?
+    @IBAction func addEvent(_ sender: Any) {
+        //http POST to event api endpoint here
+        if catidTextField.hasText && titleTextField.hasText && notesTextView.hasText{
+            print(datePicker.date)
+            let headers : HTTPHeaders = [
+                "Authorization": User.current.token
+            ]
+            
+            let body = [
+                "cat_id": catidTextField.text,
+                "event_type": "\(String(describing: aptTypeSegCntrl.titleForSegment(at: aptTypeSegCntrl.selectedSegmentIndex)))",
+                "title":titleTextField.text,
+                "date": "\(datePicker.date)",
+                "time": "\(timePicker.date)",
+                "notes": "\(notesTextView.text)"
+                ] as [String : Any]
+            
+            AF.request("https://cpcp-cats.herokuapp.com/api/events/",method: .post, parameters: body, headers: headers).responseData {
+                response in switch response.result {
+                case .success(let data):
+                    let datastring = String(data: data, encoding: .utf8)
+                    print("success with response string: \(datastring ?? "Oops! No data :(")")
+                case .failure(let error):
+                    print("failure with response error: \(error)")
+                }
+            }
+        } else {
+            //alert not all fields filled out
+            let alert = UIAlertController(title: "Incomplete", message: "please make sure all fields are filled out before adding the event", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: false)
+        }
     }
 }
