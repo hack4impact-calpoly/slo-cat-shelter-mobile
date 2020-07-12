@@ -23,6 +23,18 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         }
     }
     
+    //function for login button press, checks if textfields are filled out
+    @IBAction func loginButtonPress(_ sender: Any) {
+        if usernameTextField.hasText && passwordTextField.hasText{
+            login(username: usernameTextField.text!, password: passwordTextField.text!)
+        } else {
+            let alert = UIAlertController(title: "Login Failed", message: "Please make sure both fields are filled out", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert,animated: true)
+            return
+        }
+    }
+    
     /*Perform actions when the return key is pressed*/
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == usernameTextField {

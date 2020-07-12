@@ -42,6 +42,9 @@ class addPatientViewController: UIViewController {
     }
     
     @IBAction func submitPressed(_ sender: Any) {
+        for datePicker in formDatePickers {
+            print(convertDateFormater(datePicker.date))
+        }
         let alert = UIAlertController(title: "Incomplete Form", message: "Please make sure all required fields are filled out", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         //check for text fields not being filled out
@@ -66,17 +69,15 @@ class addPatientViewController: UIViewController {
         
         var request = URLRequest(url: requestURL)
         request.httpMethod = "POST"
-        
-        let age = String(format: "%.1f", Float(formTextFields[1].text!)! + Float(formTextFields[2].text!)!/12.0)
-        
-        var postString = "name=\(formTextFields[0].text!)&gender=\(formSegCntrls[0].titleForSegment(at: formSegCntrls[0].selectedSegmentIndex)!)&age=\(Float(age)!)&description=\(formTextViews[0].text!)&breed=\(formTextFields[3].text ?? "none")&itype=\(formSegCntrls[1].titleForSegment(at: formSegCntrls[1].selectedSegmentIndex)!)&status=\(formSegCntrls[2].titleForSegment(at:formSegCntrls[2].selectedSegmentIndex)!)&arrival_date=\(convertDateFormater(formDatePickers[0].date))&arrival_details=\(formTextViews[1].text!)&medical_history=\(formTextViews[2].text!)&vaccinations=\(formTextViews[3].text!)&is_microchipped=\(formSegCntrls[3].selectedSegmentIndex == 0 ? "T": "F")&flea_control_date=\(convertDateFormater(formDatePickers[1].date))&deworming_date=\(convertDateFormater(formDatePickers[2].date))&fiv_felv_date=\(convertDateFormater(formDatePickers[3].date))&special_needs=\(formTextViews[4].text ?? "No special needs provided.")&more_personality=\(formTextViews[5].text ?? "No additional personality provided.")&comments=\(formTextViews[6].text ?? "No comments provided.")&personal_exp=\(formTextViews[7].text ?? "No personal experience provided.")"
+        //request.setValue("basic auth", forHTTPHeaderField: "Authorization")
+            
+        var postString = "name=\(formTextFields[0].text!)&gender=\(formSegCntrls[0].titleForSegment(at: formSegCntrls[0].selectedSegmentIndex)!)&birthday=\(convertDateFormater(formDatePickers[4].date))&description=\(formTextViews[0].text!)&breed=\(formTextFields[1].text ?? "none")&itype=\(formSegCntrls[1].titleForSegment(at: formSegCntrls[1].selectedSegmentIndex)!)&status=\(formSegCntrls[2].titleForSegment(at:formSegCntrls[2].selectedSegmentIndex)!)&arrival_date=\(convertDateFormater(formDatePickers[0].date))&arrival_details=\(formTextViews[1].text!)&medical_history=\(formTextViews[2].text!)&vaccinations=\(formTextViews[3].text!)&is_microchipped=\(formSegCntrls[3].selectedSegmentIndex == 0 ? "T": "F")&flea_control_date=\(convertDateFormater(formDatePickers[1].date))&deworming_date=\(convertDateFormater(formDatePickers[2].date))&fiv_felv_date=\(convertDateFormater(formDatePickers[3].date))&special_needs=\(formTextViews[4].text ?? "No special needs provided.")&more_personality=\(formTextViews[5].text ?? "No additional personality provided.")&comments=\(formTextViews[6].text ?? "No comments provided.")&personal_exp=\(formTextViews[7].text ?? "No personal experience provided.")"
         
         for num in globalkeys {
             postString += "&personality=\(num+1)"
         }
         request.httpBody = postString.data(using: String.Encoding.utf8)
-        
-        request.setValue(User.current.token, forHTTPHeaderField: "Authorization") //dont know if this works yet
+        request.setValue("Token \(User.current.token)", forHTTPHeaderField: "Authorization") //dont know if this works yet
         
         let task = URLSession(configuration: URLSessionConfiguration.default).dataTask(with: request) {(data, response, error) in
             if let error = error {
@@ -85,10 +86,20 @@ class addPatientViewController: UIViewController {
             }
             if let data = data, let dataString = String(data: data, encoding: .utf8) {
                 print("Response data string:\n \(dataString)")
+                //self.clearFields()
             }
         }
         task.resume()
     }
+    
+//    func clearFields() {
+//        for textField in formTextFields {
+//            textField.text = ""
+//        }
+//        for textView in formTextViews {
+//            textView.text = ""
+//        }
+//    }
     
     func convertDateFormater(_ date: Date) -> String
     {

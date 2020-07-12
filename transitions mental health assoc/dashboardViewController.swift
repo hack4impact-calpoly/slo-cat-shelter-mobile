@@ -28,6 +28,8 @@ class dashboardViewController: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         
         view.addGestureRecognizer(tap)
+        
+        //add GET requests
         // Do any additional setup after loading the view.
     }
     //MARK: functions
@@ -50,6 +52,23 @@ class dashboardViewController: UIViewController {
         }
     }
     
+    private func loadDataByAlamofire(_ completion: @escaping ([Cat]?) -> Void) {
+        AF.request("https://cpcp-cats.herokuapp.com/api/events/", method: .post).responseJSON{ response in
+                guard let data = response.data else {
+                    completion(nil)
+                    return
+                }
+               // var datadict = ["results": data]
+                guard let cats = try? JSONDecoder().decode(CatList2.self, from: data) else {
+                    completion(nil)
+                    return
+                }
+                DispatchQueue.main.async {
+                    completion(cats)
+                }
+        }
+    }
+    
     @IBAction func addEvent(_ sender: Any) {
         //http POST to event api endpoint here
         if catidTextField.hasText && titleTextField.hasText && notesTextView.hasText{
@@ -59,12 +78,12 @@ class dashboardViewController: UIViewController {
             ]
             
             let body = [
-                "cat_id": catidTextField.text,
+                "cat_id": catidTextField.text!,
                 "event_type": "\(String(describing: aptTypeSegCntrl.titleForSegment(at: aptTypeSegCntrl.selectedSegmentIndex)))",
-                "title":titleTextField.text,
+                "title": titleTextField.text!,
                 "date": "\(datePicker.date)",
                 "time": "\(timePicker.date)",
-                "notes": "\(notesTextView.text)"
+                "notes": notesTextView.text!
                 ] as [String : Any]
             
             AF.request("https://cpcp-cats.herokuapp.com/api/events/",method: .post, parameters: body, headers: headers).responseData {
