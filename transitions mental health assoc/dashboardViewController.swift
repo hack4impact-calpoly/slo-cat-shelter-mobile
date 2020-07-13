@@ -52,22 +52,25 @@ class dashboardViewController: UIViewController {
         }
     }
     
-    private func loadDataByAlamofire(_ completion: @escaping ([Cat]?) -> Void) {
-        AF.request("https://cpcp-cats.herokuapp.com/api/events/", method: .post).responseJSON{ response in
-                guard let data = response.data else {
-                    completion(nil)
-                    return
-                }
-               // var datadict = ["results": data]
-                guard let cats = try? JSONDecoder().decode(CatList2.self, from: data) else {
-                    completion(nil)
-                    return
-                }
-                DispatchQueue.main.async {
-                    completion(cats)
-                }
-        }
-    }
+//    private func loadDataByAlamofire(_ completion: @escaping ([Cat]?) -> Void) {
+//        let headers : HTTPHeaders = [
+//            "Authorization": User.current.token
+//        ]
+//        AF.request("https://cpcp-cats.herokuapp.com/api/cats/", method: .get, headers: headers).responseJSON{ response in
+//                guard let data = response.data else {
+//                    completion(nil)
+//                    return
+//                }
+//               // var datadict = ["results": data]
+//                guard let cats = try? JSONDecoder().decode(CatList2.self, from: data) else {
+//                    completion(nil)
+//                    return
+//                }
+//                DispatchQueue.main.async {
+//                    completion(cats)
+//                }
+//        }
+//    }
     
     @IBAction func addEvent(_ sender: Any) {
         //http POST to event api endpoint here

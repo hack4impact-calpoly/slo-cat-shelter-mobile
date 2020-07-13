@@ -226,22 +226,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "32A1934A-6D3A-4092-853E-93C28A5E7CFC"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "transitions mental health assoc/CatDetails.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "BFDB13E1-FC66-471D-9DCB-3CB90DB8577E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -299,8 +283,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "80"
             endingLineNumber = "80"
-            landmarkName = "login(username:password:)"
-            landmarkType = "7">
+            landmarkName = "LoginViewController"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "EB41D444-F286-4072-8D4C-E160411475DF - 419f368a8d200bc4"
@@ -346,6 +330,214 @@
                   startingLineNumber = "80"
                   endingLineNumber = "80"
                   offsetFromSymbolStart = "587">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5FCF0FAB-5986-4CDB-B88B-9C9F4578BE35"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "transitions mental health assoc/User.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "User"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AB7F1935-C2FF-4208-ABB5-94224126AC89"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "transitions mental health assoc/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "didLogin(userData:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "871F06C2-F718-4544-A6BD-C72033DF359D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "transitions mental health assoc/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "loadDataByAlamofire(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "871F06C2-F718-4544-A6BD-C72033DF359D - d7b44e27b584ca07"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "transitions_mental_health_assoc.NetworkManager.(loadDataByAlamofire in _4901A3797B94DE233C67ED1F8AC8DAB3)((Swift.Optional&lt;Swift.Array&lt;transitions_mental_health_assoc.Cat&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "transitions mental health assoc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Quinn/Documents/SLO_cat_shelter_mobile/transitions%20mental%20health%20assoc/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "903">
+               </Location>
+               <Location
+                  uuid = "871F06C2-F718-4544-A6BD-C72033DF359D - e3d33af6573025bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in transitions_mental_health_assoc.NetworkManager.(loadDataByAlamofire in _4901A3797B94DE233C67ED1F8AC8DAB3)((Swift.Optional&lt;Swift.Array&lt;transitions_mental_health_assoc.Cat&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "transitions mental health assoc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Quinn/Documents/SLO_cat_shelter_mobile/transitions%20mental%20health%20assoc/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "219">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9113F55-7B49-4CA9-9C5D-D2F16BD7B288"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "transitions mental health assoc/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "loadDataByAlamofire(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5A78785-0CDE-4626-AF79-3E33505B7E85"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "transitions mental health assoc/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "loadDataByAlamofire(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4E150E04-FB67-4E44-8A6A-5FADB36BA2FB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "transitions mental health assoc/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "loadDataByAlamofire(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4EFD8E76-348F-4768-9E3F-2CA6E3C24B24"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "transitions mental health assoc/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "loadDataByAlamofire(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FAA3FC59-F7A1-4CB7-9A03-D78045D7FD49"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "transitions mental health assoc/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "loadDataByAlamofire(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5154172-7F60-40D4-9184-409A12A46F41"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "transitions mental health assoc/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "loadDataByAlamofire(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F5154172-7F60-40D4-9184-409A12A46F41 - d7b44e27b584ca07"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "transitions_mental_health_assoc.NetworkManager.(loadDataByAlamofire in _4901A3797B94DE233C67ED1F8AC8DAB3)((Swift.Optional&lt;Swift.Array&lt;transitions_mental_health_assoc.Cat&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "transitions mental health assoc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Quinn/Documents/SLO_cat_shelter_mobile/transitions%20mental%20health%20assoc/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "903">
+               </Location>
+               <Location
+                  uuid = "F5154172-7F60-40D4-9184-409A12A46F41 - e3d33af6573025bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in transitions_mental_health_assoc.NetworkManager.(loadDataByAlamofire in _4901A3797B94DE233C67ED1F8AC8DAB3)((Swift.Optional&lt;Swift.Array&lt;transitions_mental_health_assoc.Cat&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "transitions mental health assoc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Quinn/Documents/SLO_cat_shelter_mobile/transitions%20mental%20health%20assoc/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "219">
                </Location>
             </Locations>
          </BreakpointContent>

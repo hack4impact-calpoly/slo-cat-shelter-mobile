@@ -40,7 +40,7 @@ struct CatRow : View {
 //            }
             HStack {
                 Group {
-                    Text("Status: \(cat.status)")
+                    Text("Status: \(cat.gender.rawValue)")
                         .foregroundColor(.gray)
                         .lineLimit(nil)
                     Spacer()

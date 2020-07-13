@@ -19,6 +19,8 @@
 		E413711E246BC10B00E3A2AF /* CatDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E413711D246BC10B00E3A2AF /* CatDetails.swift */; };
 		E4294A50246DAFBF00AC46AE /* icons8-kitty-50.png in Resources */ = {isa = PBXBuildFile; fileRef = E4294A4F246DAFBF00AC46AE /* icons8-kitty-50.png */; };
 		E44104AB246A3D800046F4E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09422EB223C547EC00318C03 /* Main.storyboard */; };
+		E44AEA5324BC0D90009ED232 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AEA5224BC0D90009ED232 /* EventViewModel.swift */; };
+		E44AEA5524BC0E5C009ED232 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44AEA5424BC0E5C009ED232 /* Event.swift */; };
 		E44D5E9F246A0BA800807EE5 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E44D5E98246A0BA700807EE5 /* Base.lproj */; };
 		E44D5EA0246A0BA800807EE5 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44D5E99246A0BA700807EE5 /* Cat.swift */; };
 		E44D5EA2246A0BA800807EE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E44D5E9B246A0BA700807EE5 /* Assets.xcassets */; };
@@ -54,6 +56,8 @@
 		E413711B246BC07800E3A2AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E413711D246BC10B00E3A2AF /* CatDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetails.swift; sourceTree = "<group>"; };
 		E4294A4F246DAFBF00AC46AE /* icons8-kitty-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-kitty-50.png"; path = "Assets.xcassets/Image.imageset/icons8-kitty-50.png"; sourceTree = "<group>"; };
+		E44AEA5224BC0D90009ED232 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		E44AEA5424BC0E5C009ED232 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		E44D5E98246A0BA700807EE5 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		E44D5E99246A0BA700807EE5 /* Cat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		E44D5E9B246A0BA700807EE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				E4C1AD47246BC2F60024AE69 /* CatRow.swift */,
 				E4C1AD4F246C512F0024AE69 /* CatViewModel.swift */,
 				E413711B246BC07800E3A2AF /* ContentView.swift */,
+				E44AEA5224BC0D90009ED232 /* EventViewModel.swift */,
+				E44AEA5424BC0E5C009ED232 /* Event.swift */,
 				E44D5E9B246A0BA700807EE5 /* Assets.xcassets */,
 				E44D5E98246A0BA700807EE5 /* Base.lproj */,
 				E4137117246BBE0500E3A2AF /* CatList.swift */,
@@ -286,6 +292,8 @@
 				E4CD536E248D6CDA005090B4 /* LoginViewController.swift in Sources */,
 				E413711C246BC07800E3A2AF /* ContentView.swift in Sources */,
 				E4C1AD56246D0D900024AE69 /* ListViewController.swift in Sources */,
+				E44AEA5324BC0D90009ED232 /* EventViewModel.swift in Sources */,
+				E44AEA5524BC0E5C009ED232 /* Event.swift in Sources */,
 				093ABD3E2473500B00586DBE /* PersonalityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

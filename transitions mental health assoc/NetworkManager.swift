@@ -17,12 +17,13 @@ fileprivate let api_url_base = "https://cpcp-cats.herokuapp.com/api/cats/"
 class NetworkManager : ServiceProtocol {
     
     func fetchCats(completion: @escaping ([Cat]?) -> Void) {
-        //loadDataByAlamofire(completion)
-        loadDataNormal(completion)
+        loadDataByAlamofire(completion)
+        //loadDataNormal(completion)
     }
     
     private func loadDataNormal(_ completion: @escaping ([Cat]?) -> Void) {
         guard let url = URL(string: "\(api_url_base)\(api_key)") else { return }
+        //URLSession.setValue("Token \(User.current.token)", forHTTPHeaderField: "Authorization")
         URLSession.shared.dataTask(with: url){ (data, _, _) in
             guard let data = data else {
                 completion(nil)
@@ -40,7 +41,10 @@ class NetworkManager : ServiceProtocol {
     }
     
     private func loadDataByAlamofire(_ completion: @escaping ([Cat]?) -> Void) {
-        AF.request("\(api_url_base)\(api_key)").responseJSON{ response in
+        let headers : HTTPHeaders = [
+            "Authorization": "token \(User.current.token)"
+        ]
+        AF.request("\(api_url_base)\(api_key)",method: .get, headers: headers).responseJSON{ response in
                 guard let data = response.data else {
                     completion(nil)
                     return

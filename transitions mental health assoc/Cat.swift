@@ -11,19 +11,23 @@ import Alamofire
 
 struct Cat: Decodable, Identifiable, Hashable {
     let id: Int?
-    let name, gender, age, welcomeDescription: String
-    let breed, itype, status, arrivalDate: String
-    let arrivalDetails, medicalHistory, vaccinations: String
+    let name: String
+    let gender: Gender
+    let age: Double
+    let birthday, catDescription, breed: String
+    let itype: Itype
+    let status: Status
+    let arrivalDate, arrivalDetails, medicalHistory, vaccinations: String
     let isMicrochipped: Bool
     let fleaControlDate, dewormingDate, fivFelvDate: String
     let specialNeeds: String?
     let personality: [Int]
-    let morePersonality, comments, personalExp: String?
+    let morePersonality, comments: String?
+    let personalExp: String?
 
     enum CodingKeys: String, CodingKey, CaseIterable, Codable, Hashable {
-        case id
-        case name, gender, age
-        case welcomeDescription = "description"
+        case id, name, gender, age, birthday
+        case catDescription = "description"
         case breed, itype, status
         case arrivalDate = "arrival_date"
         case arrivalDetails = "arrival_details"
@@ -39,12 +43,25 @@ struct Cat: Decodable, Identifiable, Hashable {
         case comments
         case personalExp = "personal_exp"
     }
-
-    
 }
 
+enum Gender: String, Codable {
+    case m = "M"
+    case f = "F"
+}
 
+enum Itype: String, Codable {
+    case dmh = "DMH"
+    case dsh = "DSH"
+    case dlh = "DLH"
+}
 
+enum Status: String, Codable {
+    case adopt = "adopt"
+    case temporary = "temporary"
+    case permanent = "permanent"
+}
+    
 
 typealias CatList2 = [Cat]
 
