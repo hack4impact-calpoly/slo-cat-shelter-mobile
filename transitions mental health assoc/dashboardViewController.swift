@@ -1,6 +1,6 @@
 //
 //  dashboardViewController.swift
-//  transitions mental health assoc
+//  Cal Poly Cat Program App
 //
 //  Created by Finlay Piroth on 4/7/20.
 //  Copyright © 2020 Hack4Impact. All rights reserved.

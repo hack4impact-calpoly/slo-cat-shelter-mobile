@@ -10,7 +10,7 @@ import SwiftUI
 import Alamofire
 
 struct Cat: Decodable, Identifiable, Hashable {
-    let id: Int?
+    var id: Int?
     let name: String
     let gender: Gender
     let age: Double

@@ -7,6 +7,6 @@ target 'transitions mental health assoc' do
    pod 'URLImage'
    use_frameworks!
 
-  # Pods for transitions mental health assoc
+  # Pods for Cal Poly Cat Program App
 
 end

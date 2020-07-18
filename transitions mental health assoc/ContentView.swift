@@ -1,12 +1,17 @@
 //
 //  ContentView.swift
-//  transitions mental health assoc
+//  Cal Poly Cat Program App
 //
 //  Created by Jillian Quinn on 5/12/20.
 //  Copyright © 2020 Hack4Impact. All rights reserved.
 //
-import Foundation
 import SwiftUI
+import Foundation
+import Combine
+import SwiftUI
+import CoreData
+import Alamofire
+import UIKit
 
 struct ContentView : View {
     //  @ObservedObject var networkManager = NetworkManager()
@@ -20,14 +25,13 @@ struct ContentView : View {
                     Text("Loading ...")
                 } else {
                     if (viewmodel.cats.count > 0) {
-                        
                         List() {
                             ForEach (viewmodel.cats.sorted(by: { $0.name < $1.name }), id: \.self) { cat in
                                 // List(viewmodel.cats) { cat in
                                 //if (viewmodel.cats.results.count > 0) {
                                 //List(viewmodel.cats.results) { cat in
-                                NavigationLink(destination: CatDetails(cat: cat)){
-                                    CatRow(cat: cat)
+                                NavigationLink(destination: CatDetails(cat: cat, photos: self.viewmodel.photoDict[cat.id ?? 3] ?? PhotoElement(catID: 100, photourl: "https://img.icons8.com/carbon-copy/100/000000/cat.png", photoDescription: "default", uploadedAt: DateFormatter().string(from: Date()), hidden: false))){
+                                    CatRow(cat: cat, photos: self.viewmodel.photoDict[cat.id ?? 3] ?? PhotoElement(catID: 100, photourl: "https://img.icons8.com/carbon-copy/100/000000/cat.png", photoDescription: "default", uploadedAt: DateFormatter().string(from: Date()), hidden: false))
                                 }.buttonStyle(PlainButtonStyle())
                             }
                             Spacer()
@@ -56,6 +60,7 @@ struct ContentView_Previews : PreviewProvider {
     }
 }
 #endif
+
 
 
 
