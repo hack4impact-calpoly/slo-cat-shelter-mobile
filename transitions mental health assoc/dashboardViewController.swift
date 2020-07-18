@@ -127,6 +127,12 @@ class dashboardViewController: UIViewController {
                 case .success(let data):
                     let datastring = String(data: data, encoding: .utf8)
                     print("success with response string: \(datastring ?? "Oops! No data :(")")
+                    let alert = UIAlertController(title: "Event submitted!", message: "event submitted successfully", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: false)
+                    self.catidTextField.text = ""
+                    self.titleTextField.text = ""
+                    self.notesTextView.text = ""
                 case .failure(let error):
                     print("failure with response error: \(error)")
                 }
