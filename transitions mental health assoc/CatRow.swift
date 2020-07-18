@@ -36,7 +36,7 @@ struct CatRow : View {
                         .foregroundColor(.gray)
                         .lineLimit(nil)
                     Spacer()
-                Text("Age: \(cat.age)")
+                Text("Age: \(String(cat.age))")
                     .foregroundColor(.gray)
                     .lineLimit(nil)
                 Spacer()
