@@ -8,6 +8,8 @@
 
 import UIKit
 import Alamofire
+import UIKit
+import SwiftUI
 
 class dashboardViewController: UIViewController {
     
@@ -37,6 +39,10 @@ class dashboardViewController: UIViewController {
     @objc func dismissKeyboard (){
         view.endEditing(true)
     }
+    
+//    @IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {
+//    return UIHostingController(coder: coder, rootView: EventList())
+//    }
     
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
@@ -72,12 +78,13 @@ class dashboardViewController: UIViewController {
 //        }
 //    }
     
+    
     @IBAction func addEvent(_ sender: Any) {
         //http POST to event api endpoint here
         if catidTextField.hasText && titleTextField.hasText && notesTextView.hasText{
             print(datePicker.date)
             let headers : HTTPHeaders = [
-                "Authorization": User.current.token
+                "Authorization": "token \(User.current.token)"
             ]
             
             let body = [

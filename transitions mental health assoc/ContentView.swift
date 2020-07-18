@@ -27,10 +27,8 @@ struct ContentView : View {
                                     CatRow(cat: cat)
                                 }.buttonStyle(PlainButtonStyle())
                             }
-                        //Spacer()
-                        //Spacer()
-                        Spacer()
-                    }
+                            Spacer()
+                        }
                     }
                     else {
                         VStack(alignment: .center) {

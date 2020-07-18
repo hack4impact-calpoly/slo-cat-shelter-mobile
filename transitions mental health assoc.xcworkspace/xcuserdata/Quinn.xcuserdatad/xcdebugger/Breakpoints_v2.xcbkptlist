@@ -542,5 +542,325 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9A1D95EE-A2F7-43E7-94E1-3654A44AE937"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "transitions mental health assoc/EventViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+<<<<<<< Updated upstream
+            landmarkName = "unknown"
+            landmarkType = "0">
+=======
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "9A1D95EE-A2F7-43E7-94E1-3654A44AE937 - 2e6489c2e99eee7e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;transitions_mental_health_assoc.Event&gt;, transitions_mental_health_assoc.Event, transitions_mental_health_assoc.EventRow&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.Text, SwiftUI._ConditionalContent&lt;SwiftUI.List&lt;Swift.Never, SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;transitions_mental_health_assoc.Event&gt;, transitions_mental_health_assoc.Event, transitions_mental_health_assoc.EventRow&gt;, SwiftUI.Spacer)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.Text&gt;&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationBarTitle(SwiftUI.Text) -&gt; some&gt;&gt;.0 in transitions_mental_health_assoc.EventList.body.getter : some"
+                  moduleName = "transitions mental health assoc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Quinn/Documents/SLO_cat_shelter_mobile/transitions%20mental%20health%20assoc/EventViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "9A1D95EE-A2F7-43E7-94E1-3654A44AE937 - 777c6c4119357c7e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (transitions_mental_health_assoc.Event) -&gt; transitions_mental_health_assoc.EventRow in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;transitions_mental_health_assoc.Event&gt;, transitions_mental_health_assoc.Event, transitions_mental_health_assoc.EventRow&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI.Text, SwiftUI._ConditionalContent&lt;SwiftUI.List&lt;Swift.Never, SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;transitions_mental_health_assoc.Event&gt;, transitions_mental_health_assoc.Event, transitions_mental_health_assoc.EventRow&gt;, SwiftUI.Spacer)&gt;&gt;, SwiftUI.VStack&lt;SwiftUI.Text&gt;&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationBarTitle(SwiftUI.Text) -&gt; some&gt;&gt;.0 in transitions_mental_health_assoc.EventList.body.getter : some"
+                  moduleName = "transitions mental health assoc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Quinn/Documents/SLO_cat_shelter_mobile/transitions%20mental%20health%20assoc/EventViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "34">
+               </Location>
+            </Locations>
+>>>>>>> Stashed changes
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B3AF73F1-8640-4A74-A3C0-D8BA0F6607D2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "transitions mental health assoc/EventViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+<<<<<<< Updated upstream
+            landmarkName = "unknown"
+            landmarkType = "0">
+=======
+            landmarkName = "embedSwift(_:)"
+            landmarkType = "7">
+>>>>>>> Stashed changes
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5B0D9DA1-802E-46BB-9918-C9A1C530BC96"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "transitions mental health assoc/EventViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+<<<<<<< Updated upstream
+            landmarkName = "unknown"
+            landmarkType = "0">
+=======
+            landmarkName = "EventViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "5B0D9DA1-802E-46BB-9918-C9A1C530BC96 - a54a4dfeeac866cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "transitions_mental_health_assoc.EventViewController.__deallocating_deinit"
+                  moduleName = "transitions mental health assoc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Quinn/Documents/SLO_cat_shelter_mobile/transitions%20mental%20health%20assoc/EventViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "5B0D9DA1-802E-46BB-9918-C9A1C530BC96 - 6d99f5ccd418ff46"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "transitions_mental_health_assoc.EventViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; transitions_mental_health_assoc.EventViewController"
+                  moduleName = "transitions mental health assoc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Quinn/Documents/SLO_cat_shelter_mobile/transitions%20mental%20health%20assoc/EventViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "5B0D9DA1-802E-46BB-9918-C9A1C530BC96 - 4cfbe96f47bbd31f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "transitions_mental_health_assoc.EventViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; transitions_mental_health_assoc.EventViewController"
+                  moduleName = "transitions mental health assoc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Quinn/Documents/SLO_cat_shelter_mobile/transitions%20mental%20health%20assoc/EventViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "389">
+               </Location>
+               <Location
+                  uuid = "5B0D9DA1-802E-46BB-9918-C9A1C530BC96 - 9ad6249a1c630cbd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "transitions_mental_health_assoc.EventViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;transitions_mental_health_assoc.EventViewController&gt;"
+                  moduleName = "transitions mental health assoc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Quinn/Documents/SLO_cat_shelter_mobile/transitions%20mental%20health%20assoc/EventViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "5B0D9DA1-802E-46BB-9918-C9A1C530BC96 - 72ec6f9cf680a2dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "transitions_mental_health_assoc.EventViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;transitions_mental_health_assoc.EventViewController&gt;"
+                  moduleName = "transitions mental health assoc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Quinn/Documents/SLO_cat_shelter_mobile/transitions%20mental%20health%20assoc/EventViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "239">
+               </Location>
+            </Locations>
+>>>>>>> Stashed changes
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "493041FC-6E7B-4CD9-AD48-213485BB0255"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "transitions mental health assoc/EventViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+<<<<<<< Updated upstream
+            landmarkName = "unknown"
+            landmarkType = "0">
+=======
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+>>>>>>> Stashed changes
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "37F42B22-8969-42F2-A18D-4F5788C5C278"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "transitions mental health assoc/EventViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+<<<<<<< Updated upstream
+            landmarkName = "unknown"
+            landmarkType = "0">
+=======
+            landmarkName = "EventViewModel"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "37F42B22-8969-42F2-A18D-4F5788C5C278 - e184d1195ed4539e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "transitions_mental_health_assoc.EventViewModel.deinit"
+                  moduleName = "transitions mental health assoc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Quinn/Documents/SLO_cat_shelter_mobile/transitions%20mental%20health%20assoc/EventViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "37F42B22-8969-42F2-A18D-4F5788C5C278 - 4d451237c0b92523"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "transitions_mental_health_assoc.EventViewModel.__deallocating_deinit"
+                  moduleName = "transitions mental health assoc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Quinn/Documents/SLO_cat_shelter_mobile/transitions%20mental%20health%20assoc/EventViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+>>>>>>> Stashed changes
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "83DAAFE1-44C3-42D2-B76E-17A4E364DE51"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "transitions mental health assoc/EventViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+<<<<<<< Updated upstream
+            landmarkName = "unknown"
+            landmarkType = "0">
+=======
+            landmarkName = "EventList"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "83DAAFE1-44C3-42D2-B76E-17A4E364DE51 - be02e42cc84b78b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "transitions_mental_health_assoc.EventList.init() -&gt; transitions_mental_health_assoc.EventList"
+                  moduleName = "transitions mental health assoc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Quinn/Documents/SLO_cat_shelter_mobile/transitions%20mental%20health%20assoc/EventViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "21">
+               </Location>
+               <Location
+                  uuid = "83DAAFE1-44C3-42D2-B76E-17A4E364DE51 - 3e00d83e0b6f97ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "transitions_mental_health_assoc.EventList.init(eviewmodel: transitions_mental_health_assoc.EventViewModel) -&gt; transitions_mental_health_assoc.EventList"
+                  moduleName = "transitions mental health assoc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Quinn/Documents/SLO_cat_shelter_mobile/transitions%20mental%20health%20assoc/EventViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+>>>>>>> Stashed changes
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "946510F5-AD40-4E2C-BA3A-ADE36EE9EEA2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "transitions mental health assoc/EventViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+<<<<<<< Updated upstream
+            landmarkName = "unknown"
+            landmarkType = "0">
+=======
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+>>>>>>> Stashed changes
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

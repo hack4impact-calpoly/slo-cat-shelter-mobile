@@ -435,6 +435,20 @@
                                     <constraint firstItem="4bO-OT-Rs8" firstAttribute="leading" secondItem="85j-qd-JAF" secondAttribute="leading" id="bc9-b0-Ubo"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" id="Opw-lW-rvB">
+                                <rect key="frame" x="10" y="44" width="394" height="230"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BAB-XR-b01">
+                                        <rect key="frame" x="8" y="0.0" width="378" height="230"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <connections>
+                                            <segue destination="3A7-vQ-B8D" kind="embed" id="plG-3W-SWB"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.86639255289999995" green="0.9471085668" blue="0.97120600940000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1117,6 +1131,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VtV-RJ-cqE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1253.6231884057972" y="803.57142857142856"/>
+        </scene>
+        <!--Event View Controller-->
+        <scene sceneID="ZdX-tn-Rnb">
+            <objects>
+                <viewController id="3A7-vQ-B8D" customClass="EventViewController" customModule="transitions_mental_health_assoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bzc-mO-sLD">
+                        <rect key="frame" x="0.0" y="0.0" width="378" height="230"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Is-Wa-Q8z">
+                                <rect key="frame" x="0.0" y="0.0" width="378" height="230"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="XMV-gM-55W" kind="embed" id="iNv-bA-mdB"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JMC-OX-pxJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1121.7391304347827" y="-989.0625"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="zOd-5d-xBV">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ta-bb-s2U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <hostingController id="XMV-gM-55W" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="2515" y="-525"/>
         </scene>
     </scenes>
     <resources>
