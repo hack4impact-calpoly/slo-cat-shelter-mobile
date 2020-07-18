@@ -34,6 +34,7 @@
 		E4CD536E248D6CDA005090B4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CD536D248D6CDA005090B4 /* LoginViewController.swift */; };
 		E4CD5370248DE5F1005090B4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CD536F248DE5F1005090B4 /* Helper.swift */; };
 		E4CD5372248DE60A005090B4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CD5371248DE60A005090B4 /* Constants.swift */; };
+		E4D5DB5B24C2B6FC0099F227 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5DB5A24C2B6FC0099F227 /* SearchBar.swift */; };
 		F4625F6D75E9EE80169CC2B6 /* Pods_transitions_mental_health_assoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7CBC2DD793B98075CD8FDB /* Pods_transitions_mental_health_assoc.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		E4CD536D248D6CDA005090B4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E4CD536F248DE5F1005090B4 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		E4CD5371248DE60A005090B4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E4D5DB5A24C2B6FC0099F227 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				E4C1AD47246BC2F60024AE69 /* CatRow.swift */,
 				E4C1AD4F246C512F0024AE69 /* CatViewModel.swift */,
 				E413711B246BC07800E3A2AF /* ContentView.swift */,
+				E4D5DB5A24C2B6FC0099F227 /* SearchBar.swift */,
 				E44AEA5224BC0D90009ED232 /* EventViewModel.swift */,
 				E44AEA5424BC0E5C009ED232 /* Event.swift */,
 				E44D5E9B246A0BA700807EE5 /* Assets.xcassets */,
@@ -283,6 +286,7 @@
 				E4CD5370248DE5F1005090B4 /* Helper.swift in Sources */,
 				E4C1AD4E246C50820024AE69 /* ServiceProtocol.swift in Sources */,
 				E44D5EA0246A0BA800807EE5 /* Cat.swift in Sources */,
+				E4D5DB5B24C2B6FC0099F227 /* SearchBar.swift in Sources */,
 				09422EAF23C547EC00318C03 /* SceneDelegate.swift in Sources */,
 				E4C1AD50246C512F0024AE69 /* CatViewModel.swift in Sources */,
 				E413711A246BBE8F00E3A2AF /* NetworkManager.swift in Sources */,

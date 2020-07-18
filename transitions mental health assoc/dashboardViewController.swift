@@ -13,6 +13,11 @@ import SwiftUI
 
 class dashboardViewController: UIViewController {
     
+    @IBSegueAction func ConnectEventList(_ coder: NSCoder) -> UIViewController? {
+        let hostingController = UIHostingController(coder: coder, rootView: EventList())
+        hostingController!.view.backgroundColor = UIColor.clear;
+        return hostingController
+    }
     //MARK: properties
     @IBOutlet weak var catidTextField: UITextField!
     @IBOutlet weak var aptTypeSegCntrl: UISegmentedControl!

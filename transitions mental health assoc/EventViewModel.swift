@@ -25,13 +25,8 @@ class EventViewController: UIViewController {
     @IBSegueAction func embedSwift(_ coder: NSCoder) -> UIViewController? {
         return UIHostingController(coder: coder, rootView: EventList())
     }
-//    @IBSegueAction func embedSwiftUIViewEvent(_ coder: NSCoder) -> UIViewController? {
-//        return UIHostingController(coder: coder, rootView: EventList())
-//        }
 }
-
-
-
+    
 class EventViewModel: ObservableObject {
     @Published var events : Events = []
     @Published var eventloading = false
@@ -49,13 +44,11 @@ class EventViewModel: ObservableObject {
             self.events = events
         }
     }
-
 }
 
 struct EventList : View {
     @ObservedObject var eviewmodel = EventViewModel()
     var body: some View {
-        NavigationView {
             VStack (alignment: .center){
                 if eviewmodel.eventloading {
                     Text("Loading ...")
@@ -63,12 +56,8 @@ struct EventList : View {
                     if (eviewmodel.events.count > 0) {
                         List() {
                             ForEach (eviewmodel.events, id: \.self) { event in
-                                //Text("EvNET")
                                 EventRow(event: event)
                             }
-                            //.buttonStyle(PlainButtonStyle())
-                            
-                            Spacer()
                         }
                     }
                     else {
@@ -81,12 +70,8 @@ struct EventList : View {
             .onAppear {
                 self.eviewmodel.loadData()
             }
-            .navigationBarTitle(Text("Events"))
-        }
     }
 }
-
-
 
 
 
@@ -104,30 +89,29 @@ struct EventRow : View {
             }
             HStack {
                 Group {
-                    Text("Date: \(event.date)")
-                        .foregroundColor(.gray)
-                        .lineLimit(nil)
-                    Spacer()
                     Text("Time: \(event.time)")
-                    .foregroundColor(.gray)
+                    .foregroundColor(.black)
                     .lineLimit(nil)
+                    Spacer()
+                    Text("Date: \(event.date)")
+                        .foregroundColor(.black)
+                        .lineLimit(nil)
                 Spacer()
                 }
             }
             HStack {
                 Text("Type: \(event.eventType)")
-                    .foregroundColor(.gray)
+                    .foregroundColor(.black)
                     .lineLimit(nil)
                 Spacer()
             }
-            Spacer()
             HStack {
                 Text("Notes: \(event.notes!)")
                     .foregroundColor(.gray)
                     .lineLimit(nil)
                 Spacer()
             }
-        }.frame(height: 60)
+        }
     }
 }
 
@@ -161,4 +145,5 @@ class EventNetworkManager : EventServiceProtocol {
             }
         }
     }
+
 

@@ -11,6 +11,8 @@ import SwiftUI
 struct ContentView : View {
     //  @ObservedObject var networkManager = NetworkManager()
     @ObservedObject var viewmodel = CatViewModel()
+   // @ObservedObject var catSearchState = CatSearchState()
+    
     var body: some View {
         NavigationView {
             VStack (alignment: .center){
