@@ -91,13 +91,34 @@ class dashboardViewController: UIViewController {
             let headers : HTTPHeaders = [
                 "Authorization": "token \(User.current.token)"
             ]
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let date_str = dateFormatter.string(from: datePicker.date)
+            
+            dateFormatter.dateFormat = "hh:mm"
+            let time_str = dateFormatter.string(from: timePicker.date)
+            
+            var event_str = ""
+            if ("\(aptTypeSegCntrl.titleForSegment(at: aptTypeSegCntrl.selectedSegmentIndex) ?? "")" == "Vet Apt")
+            {
+                event_str = "vet"
+            }
+            if ("\(aptTypeSegCntrl.titleForSegment(at: aptTypeSegCntrl.selectedSegmentIndex) ?? "")") == "Adoption Apt"
+            {
+                event_str = "adoption"
+            }
+            if ("\(aptTypeSegCntrl.titleForSegment(at: aptTypeSegCntrl.selectedSegmentIndex) ?? "")") == "Foster Apt"
+            {
+                event_str = "foster"
+            }
             
             let body = [
                 "cat_id": catidTextField.text!,
-                "event_type": "\(String(describing: aptTypeSegCntrl.titleForSegment(at: aptTypeSegCntrl.selectedSegmentIndex)))",
+//                "event_type": "\(String(describing: aptTypeSegCntrl.titleForSegment(at: aptTypeSegCntrl.selectedSegmentIndex)))",
+                "event_type": event_str,
                 "title": titleTextField.text!,
-                "date": "\(datePicker.date)",
-                "time": "\(timePicker.date)",
+                "date": "\(date_str)",
+                "time": "\(time_str)",
                 "notes": notesTextView.text!
                 ] as [String : Any]
             

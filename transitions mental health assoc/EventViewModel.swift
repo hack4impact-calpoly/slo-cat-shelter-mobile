@@ -41,13 +41,12 @@ class EventViewModel: ObservableObject {
         eservice.fetchEvents { events in
             self.eventloading = false
             guard let events = events else { return }
-            let date = Date()
-            let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy.MM.dd"
-            let date_now = formatter.string(from: date)
-            self.events = events.filter { $0.date >= date_now }
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let date_now = dateFormatter.string(from: Date())
+            self.events = events.filter{ $0.date >= date_now }
+            }
         }
-    }
 }
 
 struct EventList : View {
