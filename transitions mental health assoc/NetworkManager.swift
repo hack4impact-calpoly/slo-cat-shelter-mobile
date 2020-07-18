@@ -1,6 +1,6 @@
 //
 //  NetworkManager.swift
-//  transitions mental health assoc
+//  Cal Poly Cat Program App
 //
 //  Created by Jillian Quinn on 5/12/20.
 //  Copyright © 2020 Hack4Impact. All rights reserved.
@@ -13,11 +13,33 @@ import CoreData
 fileprivate let api_key = ""
 fileprivate let api_url_base = "https://cpcp-cats.herokuapp.com/api/cats/"
 
+struct PhotoElement: Codable {
+    let catID: Int
+    let photourl: String
+    let photoDescription: String?
+    let uploadedAt: String
+    let hidden: Bool
+
+    enum CodingKeys: String, CodingKey {
+        case catID = "cat_id"
+        case photourl = "photo"
+        case photoDescription = "description"
+        case uploadedAt = "uploaded_at"
+        case hidden
+    }
+}
+
+typealias Photos = [PhotoElement]
+
 
 class NetworkManager : ServiceProtocol {
     
     func fetchCats(completion: @escaping ([Cat]?) -> Void) {
         loadDataByAlamofire(completion)
+        //loadDataNormal(completion)
+    }
+    func fetchPhotos(completion: @escaping ([PhotoElement]?) -> Void) {
+        loadPhotoByAlamofire(completion)
         //loadDataNormal(completion)
     }
     
@@ -59,50 +81,27 @@ class NetworkManager : ServiceProtocol {
                 }
         }
     }
-}
-
-
-
-/*
-class NetworkManager: ObservableObject {
-    @Published var cats = CatList(results: [])
-    @Published var loading = false
-//    private let api_key = ""
-//    private let api_url_base = "https://cpcp-cats.herokuapp.com/api/cats/"
-    init() {
-        loading = true
-        loadDataByAlamofire()
-        //loadDataNormal()
-    }
     
-    private func loadDataNormal() {
-        guard let url = URL(string: "\(api_url_base)\(api_key)") else { return }
-        URLSession.shared.dataTask(with: url){ (data, _, _) in
-            guard let data = data else { return }
-            let cats = try! JSONDecoder().decode(CatList.self, from: data)
-            DispatchQueue.main.async {
-                self.cats = cats
-                self.loading = false
-            }
-        }.resume()
-    }
     
-    private func loadDataByAlamofire() {
-        AF.request("\(api_url_base)\(api_key)")
-            .responseJSON{ response in
-                guard let data = response.data else { return }
-                let cats = try! JSONDecoder().decode(CatList.self, from: data)
+    private func loadPhotoByAlamofire(_ completion: @escaping ([PhotoElement]?) -> Void) {
+        let headers : HTTPHeaders = [
+            "Authorization": "token \(User.current.token)"
+        ]
+        AF.request("https://cpcp-cats.herokuapp.com/api/photos/",method: .get, headers: headers).responseJSON{ response in
+                guard let data = response.data else {
+                    completion(nil)
+                    return
+                }
+               // var datadict = ["results": data]
+                guard let photos = try? JSONDecoder().decode(Photos.self, from: data) else {
+                    completion(nil)
+                    return
+                }
                 DispatchQueue.main.async {
-                    self.cats = cats
-//                    let i = 0
-//                    for cat in self.cats {
-//                        cat.id = i
-//                        i += 1
-//                    }
-                    self.loading = false
+                    completion(photos)
                 }
         }
     }
+    
 }
-*/
 
