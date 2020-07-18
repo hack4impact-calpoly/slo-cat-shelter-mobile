@@ -41,7 +41,11 @@ class EventViewModel: ObservableObject {
         eservice.fetchEvents { events in
             self.eventloading = false
             guard let events = events else { return }
-            self.events = events
+            let date = Date()
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy.MM.dd"
+            let date_now = formatter.string(from: date)
+            self.events = events.filter { $0.date >= date_now }
         }
     }
 }
@@ -55,7 +59,7 @@ struct EventList : View {
                 } else {
                     if (eviewmodel.events.count > 0) {
                         List() {
-                            ForEach (eviewmodel.events, id: \.self) { event in
+                            ForEach (eviewmodel.events.sorted(by: { $0.date < $1.date }), id: \.self) { event in
                                 EventRow(event: event)
                             }
                         }

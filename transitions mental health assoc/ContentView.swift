@@ -20,8 +20,9 @@ struct ContentView : View {
                     Text("Loading ...")
                 } else {
                     if (viewmodel.cats.count > 0) {
+                        
                         List() {
-                            ForEach (viewmodel.cats, id: \.self) { cat in
+                            ForEach (viewmodel.cats.sorted(by: { $0.name < $1.name }), id: \.self) { cat in
                                 // List(viewmodel.cats) { cat in
                                 //if (viewmodel.cats.results.count > 0) {
                                 //List(viewmodel.cats.results) { cat in

@@ -34,14 +34,13 @@
 		E4CD536E248D6CDA005090B4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CD536D248D6CDA005090B4 /* LoginViewController.swift */; };
 		E4CD5370248DE5F1005090B4 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CD536F248DE5F1005090B4 /* Helper.swift */; };
 		E4CD5372248DE60A005090B4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CD5371248DE60A005090B4 /* Constants.swift */; };
-		E4D5DB5B24C2B6FC0099F227 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5DB5A24C2B6FC0099F227 /* SearchBar.swift */; };
 		F4625F6D75E9EE80169CC2B6 /* Pods_transitions_mental_health_assoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7CBC2DD793B98075CD8FDB /* Pods_transitions_mental_health_assoc.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0907DA91243D74E000845D96 /* dashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dashboardViewController.swift; sourceTree = "<group>"; };
 		093ABD3D2473500B00586DBE /* PersonalityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalityViewController.swift; sourceTree = "<group>"; };
-		09422EA923C547EC00318C03 /* transitions mental health assoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "transitions mental health assoc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09422EA923C547EC00318C03 /* CPCP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPCP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09422EAC23C547EC00318C03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09422EAE23C547EC00318C03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		09422EB023C547EC00318C03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +71,6 @@
 		E4CD536D248D6CDA005090B4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E4CD536F248DE5F1005090B4 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		E4CD5371248DE60A005090B4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E4D5DB5A24C2B6FC0099F227 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +100,7 @@
 		09422EAA23C547EC00318C03 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				09422EA923C547EC00318C03 /* transitions mental health assoc.app */,
+				09422EA923C547EC00318C03 /* CPCP.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,7 +122,6 @@
 				E4C1AD47246BC2F60024AE69 /* CatRow.swift */,
 				E4C1AD4F246C512F0024AE69 /* CatViewModel.swift */,
 				E413711B246BC07800E3A2AF /* ContentView.swift */,
-				E4D5DB5A24C2B6FC0099F227 /* SearchBar.swift */,
 				E44AEA5224BC0D90009ED232 /* EventViewModel.swift */,
 				E44AEA5424BC0E5C009ED232 /* Event.swift */,
 				E44D5E9B246A0BA700807EE5 /* Assets.xcassets */,
@@ -180,7 +177,7 @@
 			);
 			name = "transitions mental health assoc";
 			productName = "transitions mental health assoc";
-			productReference = 09422EA923C547EC00318C03 /* transitions mental health assoc.app */;
+			productReference = 09422EA923C547EC00318C03 /* CPCP.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -286,7 +283,6 @@
 				E4CD5370248DE5F1005090B4 /* Helper.swift in Sources */,
 				E4C1AD4E246C50820024AE69 /* ServiceProtocol.swift in Sources */,
 				E44D5EA0246A0BA800807EE5 /* Cat.swift in Sources */,
-				E4D5DB5B24C2B6FC0099F227 /* SearchBar.swift in Sources */,
 				09422EAF23C547EC00318C03 /* SceneDelegate.swift in Sources */,
 				E4C1AD50246C512F0024AE69 /* CatViewModel.swift in Sources */,
 				E413711A246BBE8F00E3A2AF /* NetworkManager.swift in Sources */,
@@ -451,8 +447,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Hack4Impact.transitions-mental-health-assoc";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = CalPolyCatProgram;
+				PRODUCT_NAME = CPCP;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -471,8 +467,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Hack4Impact.transitions-mental-health-assoc";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = CalPolyCatProgram;
+				PRODUCT_NAME = CPCP;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
