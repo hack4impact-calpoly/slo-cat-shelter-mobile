@@ -555,11 +555,16 @@
             startingLineNumber = "65"
             endingLineNumber = "65"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             landmarkName = "unknown"
             landmarkType = "0">
 =======
             landmarkName = "body"
             landmarkType = "24">
+=======
+            landmarkName = "unknown"
+            landmarkType = "0">
+>>>>>>> Stashed changes
             <Locations>
                <Location
                   uuid = "9A1D95EE-A2F7-43E7-94E1-3654A44AE937 - 2e6489c2e99eee7e"
@@ -592,6 +597,9 @@
                   offsetFromSymbolStart = "34">
                </Location>
             </Locations>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
          </BreakpointContent>
       </BreakpointProxy>
@@ -608,11 +616,16 @@
             startingLineNumber = "26"
             endingLineNumber = "26"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             landmarkName = "unknown"
             landmarkType = "0">
 =======
             landmarkName = "embedSwift(_:)"
             landmarkType = "7">
+>>>>>>> Stashed changes
+=======
+            landmarkName = "unknown"
+            landmarkType = "0">
 >>>>>>> Stashed changes
          </BreakpointContent>
       </BreakpointProxy>
@@ -629,11 +642,16 @@
             startingLineNumber = "19"
             endingLineNumber = "19"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             landmarkName = "unknown"
             landmarkType = "0">
 =======
             landmarkName = "EventViewController"
             landmarkType = "3">
+=======
+            landmarkName = "unknown"
+            landmarkType = "0">
+>>>>>>> Stashed changes
             <Locations>
                <Location
                   uuid = "5B0D9DA1-802E-46BB-9918-C9A1C530BC96 - a54a4dfeeac866cb"
@@ -711,6 +729,9 @@
                   offsetFromSymbolStart = "239">
                </Location>
             </Locations>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
          </BreakpointContent>
       </BreakpointProxy>
@@ -727,11 +748,16 @@
             startingLineNumber = "22"
             endingLineNumber = "22"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             landmarkName = "unknown"
             landmarkType = "0">
 =======
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+>>>>>>> Stashed changes
+=======
+            landmarkName = "unknown"
+            landmarkType = "0">
 >>>>>>> Stashed changes
          </BreakpointContent>
       </BreakpointProxy>
@@ -748,11 +774,16 @@
             startingLineNumber = "35"
             endingLineNumber = "35"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             landmarkName = "unknown"
             landmarkType = "0">
 =======
             landmarkName = "EventViewModel"
             landmarkType = "3">
+=======
+            landmarkName = "unknown"
+            landmarkType = "0">
+>>>>>>> Stashed changes
             <Locations>
                <Location
                   uuid = "37F42B22-8969-42F2-A18D-4F5788C5C278 - e184d1195ed4539e"
@@ -785,6 +816,9 @@
                   offsetFromSymbolStart = "16">
                </Location>
             </Locations>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
          </BreakpointContent>
       </BreakpointProxy>
@@ -801,11 +835,16 @@
             startingLineNumber = "55"
             endingLineNumber = "55"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             landmarkName = "unknown"
             landmarkType = "0">
 =======
             landmarkName = "EventList"
             landmarkType = "14">
+=======
+            landmarkName = "unknown"
+            landmarkType = "0">
+>>>>>>> Stashed changes
             <Locations>
                <Location
                   uuid = "83DAAFE1-44C3-42D2-B76E-17A4E364DE51 - be02e42cc84b78b0"
@@ -838,6 +877,9 @@
                   offsetFromSymbolStart = "4">
                </Location>
             </Locations>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
          </BreakpointContent>
       </BreakpointProxy>
@@ -854,11 +896,16 @@
             startingLineNumber = "23"
             endingLineNumber = "23"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             landmarkName = "unknown"
             landmarkType = "0">
 =======
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+>>>>>>> Stashed changes
+=======
+            landmarkName = "unknown"
+            landmarkType = "0">
 >>>>>>> Stashed changes
          </BreakpointContent>
       </BreakpointProxy>
