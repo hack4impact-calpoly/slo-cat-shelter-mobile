@@ -19,7 +19,7 @@ class dashboardViewController: UIViewController {
         return hostingController
     }
     //MARK: properties
-    @IBOutlet weak var catidTextField: UITextField!
+    @IBOutlet weak var catIDTextField: UITextField!
     @IBOutlet weak var aptTypeSegCntrl: UISegmentedControl!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -86,7 +86,7 @@ class dashboardViewController: UIViewController {
     
     @IBAction func addEvent(_ sender: Any) {
         //http POST to event api endpoint here
-        if catidTextField.hasText && titleTextField.hasText && notesTextView.hasText{
+        if catIDTextField.hasText && titleTextField.hasText && notesTextView.hasText{
             print(datePicker.date)
             let headers : HTTPHeaders = [
                 "Authorization": "token \(User.current.token)"
@@ -113,7 +113,7 @@ class dashboardViewController: UIViewController {
             }
             
             let body = [
-                "cat_id": catidTextField.text!,
+                "cat_id": catIDTextField.text!,
 //                "event_type": "\(String(describing: aptTypeSegCntrl.titleForSegment(at: aptTypeSegCntrl.selectedSegmentIndex)))",
                 "event_type": event_str,
                 "title": titleTextField.text!,
@@ -130,7 +130,7 @@ class dashboardViewController: UIViewController {
                     let alert = UIAlertController(title: "Event submitted!", message: "event submitted successfully", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(alert, animated: false)
-                    self.catidTextField.text = ""
+                    self.catIDTextField.text = ""
                     self.titleTextField.text = ""
                     self.notesTextView.text = ""
                 case .failure(let error):
