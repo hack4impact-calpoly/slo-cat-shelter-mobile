@@ -18,10 +18,12 @@ class addPatientViewController: UIViewController {
     @IBOutlet var formTextViews: [UITextView]!
     @IBOutlet var formSegCntrls: [UISegmentedControl]!
     @IBOutlet var formTextFields: [UITextField]!
+    @IBOutlet weak var collectionViewOutlet: UIView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -71,7 +73,8 @@ class addPatientViewController: UIViewController {
         request.httpMethod = "POST"
         //request.setValue("basic auth", forHTTPHeaderField: "Authorization")
             
-        var postString = "name=\(formTextFields[0].text!)&gender=\(formSegCntrls[0].titleForSegment(at: formSegCntrls[0].selectedSegmentIndex)!)&birthday=\(convertDateFormater(formDatePickers[4].date))&description=\(formTextViews[0].text!)&breed=\(formTextFields[1].text ?? "none")&itype=\(formSegCntrls[1].titleForSegment(at: formSegCntrls[1].selectedSegmentIndex)!)&status=\(formSegCntrls[2].titleForSegment(at:formSegCntrls[2].selectedSegmentIndex)!)&arrival_date=\(convertDateFormater(formDatePickers[0].date))&arrival_details=\(formTextViews[1].text!)&medical_history=\(formTextViews[2].text!)&vaccinations=\(formTextViews[3].text!)&is_microchipped=\(formSegCntrls[3].selectedSegmentIndex == 0 ? "T": "F")&flea_control_date=\(convertDateFormater(formDatePickers[1].date))&deworming_date=\(convertDateFormater(formDatePickers[2].date))&fiv_felv_date=\(convertDateFormater(formDatePickers[3].date))&special_needs=\(formTextViews[4].text ?? "No special needs provided.")&more_personality=\(formTextViews[5].text ?? "No additional personality provided.")&comments=\(formTextViews[6].text ?? "No comments provided.")&personal_exp=\(formTextViews[7].text ?? "No personal experience provided.")"
+        //if anyone is seeing this I'm sorry
+        var postString = "name=\(formTextFields[0].text!)&gender=\(formSegCntrls[0].titleForSegment(at: formSegCntrls[0].selectedSegmentIndex)!)&birthday=\(convertDateFormater(formDatePickers[4].date))&description=\(formTextViews[0].text!)&breed=\(formTextFields[1].text ?? "none")&itype=\(formSegCntrls[1].titleForSegment(at: formSegCntrls[1].selectedSegmentIndex)!)&status=\(formSegCntrls[3].titleForSegment(at:formSegCntrls[3].selectedSegmentIndex)!)&arrival_date=\(convertDateFormater(formDatePickers[0].date))&arrival_details=\(formTextViews[1].text!)&medical_history=\(formTextViews[2].text!)&vaccinations=\(formTextViews[3].text!)&is_microchipped=\(formSegCntrls[2].selectedSegmentIndex == 0 ? "T": "F")&flea_control_date=\(convertDateFormater(formDatePickers[1].date))&deworming_date=\(convertDateFormater(formDatePickers[2].date))&fiv_felv_date=\(convertDateFormater(formDatePickers[3].date))&special_needs=\(formTextViews[4].text ?? "No special needs provided.")&more_personality=\(formTextViews[5].text ?? "No additional personality provided.")&comments=\(formTextViews[6].text ?? "No comments provided.")&personal_exp=\(formTextViews[7].text ?? "No personal experience provided.")"
         
         for num in globalkeys {
             postString += "&personality=\(num+1)"
@@ -109,9 +112,17 @@ class addPatientViewController: UIViewController {
     }
 }
 
-private let reuseIdentifier = "Cell"
+//
+//  TableViewController.swift
+//  transitions mental health assoc
+//
+//  Created by Finlay Piroth on 7/30/20.
+//  Copyright © 2020 Hack4Impact. All rights reserved.
+//
 
-class CollectionViewController: UICollectionViewController {
+import UIKit
+
+class TableViewController: UITableViewController {
     
     var collectionData = [0:"Indoors only", 1:"Indoors and outdoor", 2:"Lap cat", 3:"Mellow", 4:"Active", 5:"Independent", 6:"Shy",7:"Playful",8:"Friendly",9:"Curious",10:"Feisty",11:"Affectionate",12:"Loves attention",13:"Aloof",14:"Swats when over stimulated",15:"Needs quiet home", 16:"Likes to be held/picked up", 17:"Doesn't like to be held/picked up", 18:"Comfortable with other cats", 19:"Not comfortable with other cats", 20:"Comfortable with dogs", 21:"Not comfortable with dogs", 22:"Good with younger kids",23:"Good with older kids", 24: "Needs a home with adults only", 25: "Needs time to know and trust you"]
 
@@ -119,87 +130,48 @@ class CollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
-        self.clearsSelectionOnViewWillAppear = false
+         self.clearsSelectionOnViewWillAppear = false
 
-        
-        // Do any additional setup after loading the view.
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
-    @IBAction func checkboxClick(_ sender: UIButton) {
-        if sender.isSelected {
-            sender.setImage(UIImage(named: "uncheckedbox"), for: .normal)
-            //remove tag here
-            globalkeys = globalkeys.filter { $0 != sender.tag}
-        } else {
-            sender.setImage(UIImage(named: "checkedbox"), for: .selected)
-            globalkeys.append(sender.tag)
-        }
-        print(globalkeys)
-        sender.isSelected = !sender.isSelected
-    }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
+    // MARK: - Table view data source
 
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return collectionData.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
-        if let label = cell.viewWithTag(100) as? UILabel {
-            label.text = collectionData[indexPath.row]
-        }
-        if let button = cell.viewWithTag(200) as? UIButton {
-            button.tag = indexPath.row
-        }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! TableViewCell
+        cell.cellLabel.text = collectionData[indexPath.row]
+        cell.tag = 25
+        // Configure the cell...
         return cell
     }
 
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let cell = tableView.cellForRow(at: indexPath) as! TableViewCell
+        if cell.tag == 25 {
+            UITableViewCell.animate(withDuration: 0.3, animations: {
+                cell.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+            })
+            globalkeys.append(indexPath.row)
+            print(globalkeys)
+            cell.tag = 30
+        } else {
+            UITableViewCell.animate(withDuration: 0.3, animations: {
+                cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            })
+            globalkeys = globalkeys.filter {$0 != indexPath.row}
+            print(globalkeys)
+            cell.tag = 25
+        }
     }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }
