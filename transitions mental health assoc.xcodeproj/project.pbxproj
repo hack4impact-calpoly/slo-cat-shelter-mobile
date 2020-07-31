@@ -438,7 +438,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E20AC55CC30DDB45247FCBE8 /* Pods-transitions mental health assoc.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QJ8MA528V;
 				INFOPLIST_FILE = "transitions mental health assoc/Info.plist";
@@ -458,7 +458,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 519CF78D93E47395CE52865D /* Pods-transitions mental health assoc.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QJ8MA528V;
 				INFOPLIST_FILE = "transitions mental health assoc/Info.plist";
