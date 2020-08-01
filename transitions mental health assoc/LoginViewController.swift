@@ -20,6 +20,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
         //Check if we are logged in on load
         loginbutton.backgroundColor = UIColor(red: 0.53725, green: 0.7725490, blue: 0.46666666666, alpha: 1)
+        loginbutton.layer.cornerRadius = 5.0
         if let data = UserDefaults.standard.data(forKey: "user") {
             didLogin(userData: data)
         }
@@ -28,6 +29,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     //function for login button press, checks if textfields are filled out
     @IBAction func loginButtonPress(_ sender: Any) {
         if usernameTextField.hasText && passwordTextField.hasText{
+            loginbutton.isEnabled = false
+            loginbutton.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
             login(username: usernameTextField.text!, password: passwordTextField.text!)
         } else {
             let alert = UIAlertController(title: "Login Failed", message: "Please make sure both fields are filled out", preferredStyle: .alert)
@@ -44,6 +47,8 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             passwordTextField.becomeFirstResponder()
         } else if textField == passwordTextField {
             //attempt to login when we press enter on password field
+            loginbutton.isEnabled = false
+            loginbutton.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
             login(username: self.usernameTextField.text!, password: self.passwordTextField.text!)
         }
         return true

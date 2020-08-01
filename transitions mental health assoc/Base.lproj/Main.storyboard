@@ -272,7 +272,7 @@
                                 <rect key="frame" x="10" y="0.0" width="394" height="638"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bO-OT-Rs8">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="76.5"/>
                                         <attributedString key="attributedText">
                                             <fragment content="TO DO LIST:">
                                                 <attributes>
@@ -284,7 +284,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <containerView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="225" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gp6-1i-VSn">
-                                        <rect key="frame" x="0.0" y="26.5" width="394" height="250"/>
+                                        <rect key="frame" x="0.0" y="76.5" width="394" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="JqU-f5-KCt"/>
+                                        </constraints>
                                         <connections>
                                             <segue destination="SCa-Ox-YrH" kind="embed" destinationCreationSelector="ConnectEventList:" id="3hH-0A-Qtb"/>
                                         </connections>
