@@ -26,7 +26,7 @@ struct CatRow : View {
             Spacer()
             HStack {
                 Text(cat.name)
-                    .foregroundColor(.blue)
+                    .foregroundColor(.init(red: 0.53725, green: 0.7725490, blue: 0.46666666666))
                     .lineLimit(nil)
                 Spacer()
             }

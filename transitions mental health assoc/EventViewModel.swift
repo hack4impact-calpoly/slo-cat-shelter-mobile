@@ -63,7 +63,7 @@ struct EventList : View {
                     }
                     else {
                         VStack(alignment: .center) {
-                            Text("No Events")
+                            Text("You don't have any events scheduled. Schedule one below:").multilineTextAlignment(.center)
                         }
                     }
                 }
@@ -84,7 +84,7 @@ struct EventRow : View {
             Spacer()
             HStack {
                 Text(event.title)
-                    .foregroundColor(.blue)
+                    .foregroundColor(Color(red: 0.7215686, green: 0.917647, blue: 0.6888888))
                     .lineLimit(nil)
                 Spacer()
             }

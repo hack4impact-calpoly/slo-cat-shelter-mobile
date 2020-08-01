@@ -93,6 +93,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="mP5-tE-GqW"/>
                     <connections>
+                        <outlet property="loginbutton" destination="hVz-AH-9no" id="p3R-Nn-3nb"/>
                         <outlet property="passwordTextField" destination="gvZ-hk-tKv" id="Qbh-bW-bJA"/>
                         <outlet property="usernameTextField" destination="tcq-Ry-aNj" id="skR-8p-2qt"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="loginToDashboard" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="1CC-6k-aTx"/>
@@ -133,7 +134,7 @@
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hb7-Pa-chV">
                                         <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
-                                        <color key="backgroundColor" red="0.44313725490196076" green="0.78431372549019607" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.4424934089" green="0.78450930119999995" blue="0.89219754929999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="85" id="SLZ-Sc-0z5"/>
                                             <constraint firstAttribute="width" constant="85" id="Zfx-cl-pAV"/>
@@ -190,7 +191,7 @@
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ct2-1L-qw8">
                                         <rect key="frame" x="260" y="0.0" width="85" height="85"/>
-                                        <color key="backgroundColor" red="0.44313725490196076" green="0.78431372549019607" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.4424934089" green="0.78450930119999995" blue="0.89219754929999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="85" id="405-Jp-ETD"/>
                                             <constraint firstAttribute="height" constant="85" id="aqv-6C-WSD"/>
@@ -282,7 +283,7 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gp6-1i-VSn">
+                                    <containerView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="225" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gp6-1i-VSn">
                                         <rect key="frame" x="0.0" y="26.5" width="394" height="250"/>
                                         <connections>
                                             <segue destination="SCa-Ox-YrH" kind="embed" destinationCreationSelector="ConnectEventList:" id="3hH-0A-Qtb"/>
@@ -458,6 +459,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="at6-iw-Mlm"/>
                     <connections>
+                        <outlet property="addbutton" destination="42H-ae-wMz" id="gaI-DC-Q38"/>
                         <outlet property="aptTypeSegCntrl" destination="gPK-wo-wMP" id="cRJ-Nv-0Iq"/>
                         <outlet property="catIDTextField" destination="WWB-WL-WKw" id="YOe-Gb-kyP"/>
                         <outlet property="datePicker" destination="KqJ-w9-JK4" id="lGH-DD-oWh"/>
@@ -486,9 +488,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="648"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qIl-Fe-zF4">
+                            <containerView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qIl-Fe-zF4">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="648"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <connections>
                                     <segue destination="dri-Ji-EdC" kind="embed" destinationCreationSelector="embedSwiftUIView:" id="n4O-1d-D7g"/>
                                 </connections>
@@ -1024,6 +1026,7 @@
                         <viewLayoutGuide key="safeArea" id="Ar3-9G-jla"/>
                     </view>
                     <connections>
+                        <outlet property="submitbutton" destination="M6f-2C-Aqf" id="h1m-7y-KFv"/>
                         <outletCollection property="formTextFields" destination="D2Y-fF-ida" collectionClass="NSMutableArray" id="vO4-Xc-ACe"/>
                         <outletCollection property="formTextFields" destination="NdA-JM-egs" collectionClass="NSMutableArray" id="v01-3b-Spz"/>
                         <outletCollection property="formSegCntrls" destination="YD3-N5-aVB" collectionClass="NSMutableArray" id="aiM-MF-PnT"/>

@@ -190,7 +190,7 @@ struct CatDetails : View {
         .padding()
         .navigationBarTitle(Text(cat.name), displayMode: .inline)
             // .background(Color.bluecat.opacity(0.3)) 95,169,218
-            .background(Color(red: 0.37, green: 0.66, blue: 0.85))
+            .background(Color(red: 0.7215686, green: 0.917647, blue: 0.6888888))
             .edgesIgnoringSafeArea(.all)
     }
     

@@ -35,7 +35,9 @@ class ViewController: UIViewController {
         //set up buttons
         setButton(button: dashboardButton)
         dashboardButton.isSelected = true
-        dashboardButton.backgroundColor = UIColor(red: 0.2588, green: 0.66667, blue: 0.8745, alpha: 1)
+        dashboardButton.backgroundColor = UIColor(red: 0.53725, green: 0.7725490, blue: 0.46666666666, alpha: 1)
+        messagesButton.backgroundColor = UIColor(red: 0.7215686, green: 0.917647, blue: 0.6888888, alpha: 1)
+        patientDataButton.backgroundColor = UIColor(red: 0.7215686, green: 0.917647, blue: 0.6888888, alpha: 1)
         setButton(button: messagesButton)
         messagesButton.isSelected = false
         setButton(button: patientDataButton)
@@ -62,9 +64,9 @@ class ViewController: UIViewController {
             } else {
                 UIView.animate(withDuration: 0.3, animations: {self.dashboardContainerView.alpha = 1; self.messagesContainerView.alpha = 0; self.patientDataContainerView.alpha = 0})
                 dashboardButton.isSelected = true
-                UIButton.animate(withDuration: 0.3, animations: {self.dashboardButton.backgroundColor = UIColor(red: 0.2588, green: 0.66667, blue: 0.8745, alpha: 1)})
-                UIButton.animate(withDuration: 0.3, animations:{ self.messagesButton.backgroundColor = UIColor(red: 0.443, green: 0.7843, blue: 0.8941, alpha: 1)})
-                UIButton.animate(withDuration: 0.3, animations:{ self.patientDataButton.backgroundColor = UIColor(red: 0.443, green: 0.7843, blue: 0.8941, alpha: 1)})
+                UIButton.animate(withDuration: 0.3, animations: {self.dashboardButton.backgroundColor = UIColor(red: 0.53725, green: 0.7725490, blue: 0.46666666666, alpha: 1)})
+                UIButton.animate(withDuration: 0.3, animations:{ self.messagesButton.backgroundColor = UIColor(red: 0.7215686, green: 0.917647, blue: 0.6888888, alpha: 1)})
+                UIButton.animate(withDuration: 0.3, animations:{ self.patientDataButton.backgroundColor = UIColor(red: 0.7215686, green: 0.917647, blue: 0.6888888, alpha: 1)})
                 currentButton = 1
             }
         } else if sender.tag == 2 {
@@ -73,9 +75,9 @@ class ViewController: UIViewController {
             } else {
                 UIView.animate(withDuration: 0.3, animations: {self.dashboardContainerView.alpha = 0; self.messagesContainerView.alpha = 1; self.patientDataContainerView.alpha = 0})
                 messagesButton.isSelected = true
-                UIButton.animate(withDuration: 0.3, animations: {self.messagesButton.backgroundColor = UIColor(red: 0.2588, green: 0.66667, blue: 0.8745, alpha: 1)})
-                UIButton.animate(withDuration: 0.3, animations:{ self.dashboardButton.backgroundColor = UIColor(red: 0.443, green: 0.7843, blue: 0.8941, alpha: 1)})
-                UIButton.animate(withDuration: 0.3, animations:{ self.patientDataButton.backgroundColor = UIColor(red: 0.443, green: 0.7843, blue: 0.8941, alpha: 1)})
+                UIButton.animate(withDuration: 0.3, animations: {self.messagesButton.backgroundColor = UIColor(red: 0.53725, green: 0.7725490, blue: 0.46666666666, alpha: 1)})
+                UIButton.animate(withDuration: 0.3, animations:{ self.dashboardButton.backgroundColor = UIColor(red: 0.7215686, green: 0.917647, blue: 0.6888888, alpha: 1)})
+                UIButton.animate(withDuration: 0.3, animations:{ self.patientDataButton.backgroundColor = UIColor(red: 0.7215686, green: 0.917647, blue: 0.6888888, alpha: 1)})
                 currentButton = 2
             }
         } else if sender.tag == 3 {
@@ -84,9 +86,9 @@ class ViewController: UIViewController {
             } else {
                 UIView.animate(withDuration: 0.3, animations: {self.dashboardContainerView.alpha = 0; self.messagesContainerView.alpha = 0; self.patientDataContainerView.alpha = 1})
                 patientDataButton.isSelected = true
-                UIButton.animate(withDuration: 0.3, animations: {self.patientDataButton.backgroundColor = UIColor(red: 0.2588, green: 0.66667, blue: 0.8745, alpha: 1)})
-                UIButton.animate(withDuration: 0.3, animations:{ self.messagesButton.backgroundColor = UIColor(red: 0.443, green: 0.7843, blue: 0.8941, alpha: 1)})
-                UIButton.animate(withDuration: 0.3, animations:{ self.dashboardButton.backgroundColor = UIColor(red: 0.443, green: 0.7843, blue: 0.8941, alpha: 1)})
+                UIButton.animate(withDuration: 0.3, animations: {self.patientDataButton.backgroundColor = UIColor(red: 0.53725, green: 0.7725490, blue: 0.46666666666, alpha: 1)})
+                UIButton.animate(withDuration: 0.3, animations:{ self.messagesButton.backgroundColor = UIColor(red: 0.7215686, green: 0.917647, blue: 0.6888888, alpha: 1)})
+                UIButton.animate(withDuration: 0.3, animations:{ self.dashboardButton.backgroundColor = UIColor(red: 0.7215686, green: 0.917647, blue: 0.6888888, alpha: 1)})
                 currentButton = 3
             }
         } else {

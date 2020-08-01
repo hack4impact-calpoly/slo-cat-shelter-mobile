@@ -20,10 +20,11 @@ class addPatientViewController: UIViewController {
     @IBOutlet var formTextFields: [UITextField]!
     @IBOutlet weak var collectionViewOutlet: UIView!
     
+    @IBOutlet weak var submitbutton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        submitbutton.backgroundColor = UIColor(red: 0.53725, green: 0.7725490, blue: 0.46666666666, alpha: 1)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }

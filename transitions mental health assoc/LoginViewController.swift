@@ -15,9 +15,11 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var usernameTextField:UITextField!
     @IBOutlet var passwordTextField:UITextField!
                                  
+    @IBOutlet weak var loginbutton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         //Check if we are logged in on load
+        loginbutton.backgroundColor = UIColor(red: 0.53725, green: 0.7725490, blue: 0.46666666666, alpha: 1)
         if let data = UserDefaults.standard.data(forKey: "user") {
             didLogin(userData: data)
         }
