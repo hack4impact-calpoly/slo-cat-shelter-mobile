@@ -21,6 +21,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         //Check if we are logged in on load
         loginbutton.backgroundColor = UIColor(red: 0.53725, green: 0.7725490, blue: 0.46666666666, alpha: 1)
         loginbutton.layer.cornerRadius = 5.0
+        enable()
         if let data = UserDefaults.standard.data(forKey: "user") {
             didLogin(userData: data)
         }
@@ -29,8 +30,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     //function for login button press, checks if textfields are filled out
     @IBAction func loginButtonPress(_ sender: Any) {
         if usernameTextField.hasText && passwordTextField.hasText{
-            loginbutton.isEnabled = false
-            loginbutton.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+            disable()
             login(username: usernameTextField.text!, password: passwordTextField.text!)
         } else {
             let alert = UIAlertController(title: "Login Failed", message: "Please make sure both fields are filled out", preferredStyle: .alert)
@@ -47,8 +47,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             passwordTextField.becomeFirstResponder()
         } else if textField == passwordTextField {
             //attempt to login when we press enter on password field
-            loginbutton.isEnabled = false
-            loginbutton.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+            disable()
             login(username: self.usernameTextField.text!, password: self.passwordTextField.text!)
         }
         return true
@@ -88,8 +87,23 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
 //    }
         
     
+    func disable() -> Void {
+        passwordTextField.isEnabled = false
+        usernameTextField.isEnabled = false
+        loginbutton.isEnabled = false
+        usernameTextField.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        passwordTextField.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        loginbutton.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+    }
     
-    
+    func enable() -> Void {
+        passwordTextField.isEnabled = true
+        usernameTextField.isEnabled = true
+        loginbutton.isEnabled = true
+        usernameTextField.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        passwordTextField.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        loginbutton.backgroundColor = UIColor(red: 0.53725, green: 0.7725490, blue: 0.46666666666, alpha: 1)
+    }
     
     func login(username:String,password:String) {
         let params = ["username":username,"password":password] as [String:Any]
@@ -100,8 +114,10 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                     case 200:
                         self.didLogin(userData: data)
                     case 401:
+                        self.enable()
                         Helper.showAlert(viewController: self, title: "Oops", message: "Username or Password Incorrect")
                     default:
+                        self.enable()
                         Helper.showAlert(viewController: self, title: "Oops", message: "Incorrect Username or Password")
                 }
             case .failure(let error):

@@ -302,29 +302,31 @@
                                         <rect key="frame" x="0.0" y="300.5" width="394" height="337.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Z9-7d-Wfg">
-                                                <rect key="frame" x="0.0" y="0.0" width="394" height="750"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="850"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tfW-iv-Pvc">
-                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="705"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="821"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="frE-57-bqc">
-                                                                <rect key="frame" x="10" y="20" width="374" height="34"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="frE-57-bqc">
+                                                                <rect key="frame" x="10" y="20" width="374" height="150"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nf8-8g-s4e">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="58" height="34"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="114" height="150"/>
                                                                         <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="18"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WWB-WL-WKw">
-                                                                        <rect key="frame" x="108" y="0.0" width="266" height="34"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                                    </textField>
+                                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Sp-hl-yKr">
+                                                                        <rect key="frame" x="124" y="0.0" width="250" height="150"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="250" id="km7-US-phk"/>
+                                                                            <constraint firstAttribute="height" constant="150" id="t75-KM-15N"/>
+                                                                        </constraints>
+                                                                    </pickerView>
                                                                 </subviews>
                                                             </stackView>
                                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gPK-wo-wMP">
-                                                                <rect key="frame" x="10" y="74" width="374" height="32"/>
+                                                                <rect key="frame" x="10" y="190" width="374" height="32"/>
                                                                 <segments>
                                                                     <segment title="Vet Apt"/>
                                                                     <segment title="Adoption Apt"/>
@@ -332,7 +334,7 @@
                                                                 </segments>
                                                             </segmentedControl>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Yqb-qz-Kyy">
-                                                                <rect key="frame" x="10" y="125" width="374" height="50"/>
+                                                                <rect key="frame" x="10" y="241" width="374" height="50"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtL-4R-vET">
                                                                         <rect key="frame" x="8" y="8" width="93.5" height="34"/>
@@ -349,7 +351,7 @@
                                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="irY-PF-5qL">
-                                                                <rect key="frame" x="10" y="195" width="374" height="174"/>
+                                                                <rect key="frame" x="10" y="311" width="374" height="174"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PV-er-PZj">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
@@ -366,7 +368,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="v0V-e1-w3B">
-                                                                <rect key="frame" x="10" y="389" width="374" height="124"/>
+                                                                <rect key="frame" x="10" y="505" width="374" height="124"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VrT-4v-hUE">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
@@ -383,7 +385,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6YA-Yg-c4x">
-                                                                <rect key="frame" x="10" y="533" width="374" height="116"/>
+                                                                <rect key="frame" x="10" y="649" width="374" height="116"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rU-Xs-xz8">
                                                                         <rect key="frame" x="8" y="8" width="96" height="100"/>
@@ -411,7 +413,7 @@
                                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="20"/>
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42H-ae-wMz">
-                                                                <rect key="frame" x="10" y="669" width="374" height="36"/>
+                                                                <rect key="frame" x="10" y="785" width="374" height="36"/>
                                                                 <color key="backgroundColor" red="0.4431372549" green="0.7843137255" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="18"/>
                                                                 <state key="normal" title="Add Event">
@@ -429,9 +431,14 @@
                                                 <constraints>
                                                     <constraint firstItem="tfW-iv-Pvc" firstAttribute="leading" secondItem="7Z9-7d-Wfg" secondAttribute="leading" id="5kX-Ek-5IC"/>
                                                     <constraint firstAttribute="trailing" secondItem="tfW-iv-Pvc" secondAttribute="trailing" id="LyY-zn-yJq"/>
-                                                    <constraint firstAttribute="height" constant="750" id="SOL-8p-MUW"/>
+                                                    <constraint firstAttribute="height" constant="850" id="SOL-8p-MUW"/>
                                                     <constraint firstItem="tfW-iv-Pvc" firstAttribute="top" secondItem="7Z9-7d-Wfg" secondAttribute="top" id="epx-uT-bP3"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <constraints>
@@ -441,6 +448,11 @@
                                             <constraint firstItem="7Z9-7d-Wfg" firstAttribute="leading" secondItem="2c3-jZ-IHW" secondAttribute="leading" id="f7U-Ce-VpU"/>
                                             <constraint firstAttribute="trailing" secondItem="7Z9-7d-Wfg" secondAttribute="trailing" id="pJD-fe-RMh"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </scrollView>
                                 </subviews>
                                 <constraints>
@@ -464,7 +476,7 @@
                     <connections>
                         <outlet property="addbutton" destination="42H-ae-wMz" id="gaI-DC-Q38"/>
                         <outlet property="aptTypeSegCntrl" destination="gPK-wo-wMP" id="cRJ-Nv-0Iq"/>
-                        <outlet property="catIDTextField" destination="WWB-WL-WKw" id="YOe-Gb-kyP"/>
+                        <outlet property="catIDPickerView" destination="0Sp-hl-yKr" id="dF7-XI-fJ6"/>
                         <outlet property="datePicker" destination="KqJ-w9-JK4" id="lGH-DD-oWh"/>
                         <outlet property="notesTextView" destination="XeH-vP-EWS" id="a9N-Q7-3B3"/>
                         <outlet property="timePicker" destination="2qZ-P7-T8J" id="X51-Ad-KOH"/>
@@ -995,6 +1007,11 @@
                                                     <constraint firstItem="xZR-s3-AZp" firstAttribute="top" secondItem="PNr-2T-mLz" secondAttribute="top" constant="5" id="Hur-iX-UR7"/>
                                                     <constraint firstAttribute="height" constant="3750" id="edh-yu-GhA"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <constraints>
@@ -1017,6 +1034,11 @@
                                     <constraint firstItem="M6f-2C-Aqf" firstAttribute="centerX" secondItem="odG-Oj-Bs1" secondAttribute="centerX" id="jWF-Tw-jG3"/>
                                     <constraint firstItem="wVF-Em-2Ja" firstAttribute="centerX" secondItem="odG-Oj-Bs1" secondAttribute="centerX" id="mAI-ow-CdY"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.87946099040000003" green="0.94741302729999999" blue="0.96802610160000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

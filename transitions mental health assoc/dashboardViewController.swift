@@ -11,25 +11,32 @@ import Alamofire
 import UIKit
 import SwiftUI
 
-class dashboardViewController: UIViewController {
+class dashboardViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBSegueAction func ConnectEventList(_ coder: NSCoder) -> UIViewController? {
         let hostingController = UIHostingController(coder: coder, rootView: EventList())
         hostingController!.view.backgroundColor = UIColor.clear;
         return hostingController
     }
+    
     //MARK: properties
-    @IBOutlet weak var catIDTextField: UITextField!
     @IBOutlet weak var aptTypeSegCntrl: UISegmentedControl!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var addbutton: UIButton!
     @IBOutlet weak var notesTextView: UITextView!
+    @IBOutlet weak var catIDPickerView: UIPickerView!
+    var data: [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.catIDPickerView.delegate = self
+        self.catIDPickerView.dataSource = self
+        
         //the following nasty code is to bump everything up so that the keyboard doesn't block input fields, and bump it back down when keyboard is gone
+        aptTypeSegCntrl.selectedSegmentTintColor = UIColor(red: 0.53725, green: 0.7725490, blue: 0.46666666666, alpha: 1)
+        aptTypeSegCntrl.backgroundColor = UIColor(red: 0.7215686, green: 0.917647, blue: 0.6888888, alpha: 1)
         addbutton.backgroundColor = UIColor(red: 0.53725, green: 0.7725490, blue: 0.46666666666, alpha: 1)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -37,20 +44,28 @@ class dashboardViewController: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         
         view.addGestureRecognizer(tap)
-        
-        //add GET requests
-        // Do any additional setup after loading the view.
     }
+    
     //MARK: functions
+    //UIPicker Functions
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return data.count
+    }
+    
+    //This function is what puts the data in each row, presuming data will have the cats in it
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return data[row]
+    }
     
     @objc func dismissKeyboard (){
         view.endEditing(true)
     }
     
-//    @IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {
-//    return UIHostingController(coder: coder, rootView: EventList())
-//    }
-    
+    //keyboard hide/show functions
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
@@ -65,30 +80,10 @@ class dashboardViewController: UIViewController {
         }
     }
     
-//    private func loadDataByAlamofire(_ completion: @escaping ([Cat]?) -> Void) {
-//        let headers : HTTPHeaders = [
-//            "Authorization": User.current.token
-//        ]
-//        AF.request("https://cpcp-cats.herokuapp.com/api/cats/", method: .get, headers: headers).responseJSON{ response in
-//                guard let data = response.data else {
-//                    completion(nil)
-//                    return
-//                }
-//               // var datadict = ["results": data]
-//                guard let cats = try? JSONDecoder().decode(CatList2.self, from: data) else {
-//                    completion(nil)
-//                    return
-//                }
-//                DispatchQueue.main.async {
-//                    completion(cats)
-//                }
-//        }
-//    }
-    
-    
+    //http post triggered by event submission
     @IBAction func addEvent(_ sender: Any) {
         //http POST to event api endpoint here
-        if catIDTextField.hasText && titleTextField.hasText && notesTextView.hasText{
+        if titleTextField.hasText && notesTextView.hasText{
             print(datePicker.date)
             let headers : HTTPHeaders = [
                 "Authorization": "token \(User.current.token)"
@@ -115,8 +110,7 @@ class dashboardViewController: UIViewController {
             }
             
             let body = [
-                "cat_id": catIDTextField.text!,
-//                "event_type": "\(String(describing: aptTypeSegCntrl.titleForSegment(at: aptTypeSegCntrl.selectedSegmentIndex)))",
+                "cat_id": "test",
                 "event_type": event_str,
                 "title": titleTextField.text!,
                 "date": "\(date_str)",
@@ -132,7 +126,6 @@ class dashboardViewController: UIViewController {
                     let alert = UIAlertController(title: "Event submitted!", message: "event submitted successfully", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(alert, animated: false)
-                    self.catIDTextField.text = ""
                     self.titleTextField.text = ""
                     self.notesTextView.text = ""
                 case .failure(let error):
