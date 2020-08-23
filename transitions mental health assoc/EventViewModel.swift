@@ -16,7 +16,7 @@ import SwiftUI
 
 class EventViewController: UIViewController {
     
-    //@State var switchpage = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -28,10 +28,13 @@ class EventViewController: UIViewController {
 class EventViewModel: ObservableObject {
     @Published var events : Events = []
     @Published var eventloading = false
+    @State var refreshPage = false
+    
 
     let eservice: EventServiceProtocol
     init(eservice: EventServiceProtocol = EventNetworkManager()) {
         self.eservice = eservice
+        
     }
 
     func loadData() {
@@ -71,11 +74,9 @@ struct EventList : View {
             .onAppear {
                 self.eviewmodel.loadData()
             }
+        
     }
 }
-
-
-
 
 struct EventRow : View {
     var event: Event
@@ -84,7 +85,7 @@ struct EventRow : View {
             Spacer()
             HStack {
                 Text(event.title)
-                    .foregroundColor(Color(red: 0.7215686, green: 0.917647, blue: 0.6888888))
+                    .foregroundColor(Color(red: 0.53725, green: 0.7725490, blue: 0.46666666666))
                     .lineLimit(nil)
                 Spacer()
             }
@@ -97,17 +98,18 @@ struct EventRow : View {
                     Text("Date: \(event.date)")
                         .foregroundColor(.black)
                         .lineLimit(nil)
-                    Text("Cat: \(event.name)")
-                    .foregroundColor(.black)
-                    .lineLimit(nil)
-                Spacer()
+//                Spacer()
                 }
             }
             HStack {
+                Text("Cat: \(event.name ?? "")")
+                .foregroundColor(.black)
+                .lineLimit(nil)
+                Spacer()
                 Text("Type: \(event.eventType)")
                     .foregroundColor(.black)
                     .lineLimit(nil)
-                Spacer()
+//                Spacer()
             }
             HStack {
                 Text("Notes: \(event.notes!)")
@@ -124,12 +126,13 @@ protocol EventServiceProtocol {
 }
 
 class EventNetworkManager : EventServiceProtocol {
-
+//    @ObservedObject var eviewmodel = EventViewModel()
     func fetchEvents(completion: @escaping ([Event]?) -> Void) {
         eloadDataByAlamofire(completion)
     }
 
     private func eloadDataByAlamofire(_ completion: @escaping ([Event]?) -> Void) {
+        
             let headers : HTTPHeaders = [
                 "Authorization": "token \(User.current.token)"
             ]
@@ -146,6 +149,7 @@ class EventNetworkManager : EventServiceProtocol {
                     DispatchQueue.main.async {
                         completion(events)
                     }
+//                self.eviewmodel.refreshPage = true
             }
         }
     }

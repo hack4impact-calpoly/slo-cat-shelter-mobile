@@ -144,7 +144,7 @@ class dashboardViewController: UIViewController, UIPickerViewDataSource, UIPicke
             
             let body = [
                 "cat_id": self.selectedCatid,
-                "name": self.selectedCatName,
+//                "name": "\(self.selectedCatName)",
                 "event_type": event_str,
                 "title": titleTextField.text!,
                 "date": "\(date_str)",

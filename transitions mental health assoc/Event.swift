@@ -9,7 +9,9 @@
 import Foundation
  struct Event: Decodable, Identifiable, Hashable {
     let id: Int?
-    let catID, name, eventType, title, date: String
+    let catID: String
+    let name: String?
+    let eventType, title, date: String
     let time: String
     let notes: String?
 
