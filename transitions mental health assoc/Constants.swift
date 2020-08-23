@@ -11,5 +11,4 @@
 import Foundation
                              
 let API_HOST = "https://cpcp-cats.herokuapp.com/api/users/"
-//let SOCK_HOST = "ws://localhost:800"
 

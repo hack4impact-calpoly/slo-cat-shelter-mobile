@@ -9,7 +9,6 @@
 import Foundation
 
 struct CatList: Decodable {
-  //  var num: Int
     var results: [Cat]
     
     enum Category: String, CaseIterable, Codable, Hashable {

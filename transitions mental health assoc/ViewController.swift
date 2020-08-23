@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import Combine
 
 class ViewController: UIViewController {
     
@@ -28,9 +29,13 @@ class ViewController: UIViewController {
     
     var currentButton = 1
     
+    @ObservedObject var viewmodel = CatViewModel()
+    
+    
 
     
     override func viewDidLoad() {
+        viewmodel.loadData()
         super.viewDidLoad()
         //set up buttons
         setButton(button: dashboardButton)
@@ -43,9 +48,6 @@ class ViewController: UIViewController {
         setButton(button: patientDataButton)
         patientDataButton.isSelected = false
         
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-//        
-//        view.addGestureRecognizer(tap)
         
         //init which view shown
         dashboardContainerView.alpha = 1
@@ -62,6 +64,7 @@ class ViewController: UIViewController {
             if currentButton == 1 {
                 return
             } else {
+                self.dashboardContainerView.layoutIfNeeded()
                 UIView.animate(withDuration: 0.3, animations: {self.dashboardContainerView.alpha = 1; self.messagesContainerView.alpha = 0; self.patientDataContainerView.alpha = 0})
                 dashboardButton.isSelected = true
                 UIButton.animate(withDuration: 0.3, animations: {self.dashboardButton.backgroundColor = UIColor(red: 0.53725, green: 0.7725490, blue: 0.46666666666, alpha: 1)})
@@ -73,6 +76,7 @@ class ViewController: UIViewController {
             if currentButton == 2 {
                 return
             } else {
+                self.messagesContainerView.layoutIfNeeded()
                 UIView.animate(withDuration: 0.3, animations: {self.dashboardContainerView.alpha = 0; self.messagesContainerView.alpha = 1; self.patientDataContainerView.alpha = 0})
                 messagesButton.isSelected = true
                 UIButton.animate(withDuration: 0.3, animations: {self.messagesButton.backgroundColor = UIColor(red: 0.53725, green: 0.7725490, blue: 0.46666666666, alpha: 1)})
@@ -84,6 +88,7 @@ class ViewController: UIViewController {
             if currentButton == 3 {
                 return
             } else {
+                self.patientDataContainerView.layoutIfNeeded()
                 UIView.animate(withDuration: 0.3, animations: {self.dashboardContainerView.alpha = 0; self.messagesContainerView.alpha = 0; self.patientDataContainerView.alpha = 1})
                 patientDataButton.isSelected = true
                 UIButton.animate(withDuration: 0.3, animations: {self.patientDataButton.backgroundColor = UIColor(red: 0.53725, green: 0.7725490, blue: 0.46666666666, alpha: 1)})

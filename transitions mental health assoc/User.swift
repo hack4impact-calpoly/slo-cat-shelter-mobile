@@ -11,10 +11,6 @@ import Foundation
                              
 struct User:Decodable{
     static var current:User!
-   //  var id:String
-   // var username:String
-   //   var password:String
-   //   var email:String
     var token:String
     
 }

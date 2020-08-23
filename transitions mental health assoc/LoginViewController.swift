@@ -10,10 +10,19 @@
          
 import UIKit
 import Alamofire
+import SwiftUI
+import Foundation
+import Combine
+import SwiftUI
+import CoreData
+import Alamofire
+import UIKit
                              
 class LoginViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet var usernameTextField:UITextField!
     @IBOutlet var passwordTextField:UITextField!
+    
+    @ObservedObject var viewmodel = CatViewModel()
                                  
     @IBOutlet weak var loginbutton: UIButton!
     override func viewDidLoad() {
@@ -53,39 +62,6 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         return true
     }
     
-    
-    /*Login with username and password*/
-//    func login(username:String,password:String) {
-//        let credentials = "f53bc11b9583f18ac20898c2e931efcc648339a3"
-//
-//        var semaphore = DispatchSemaphore (value: 0)
-//
-//        var request = URLRequest(url: URL(string: "https://cpcp-cats.herokuapp.com/api/users/")!,timeoutInterval: Double.infinity)
-//        request.addValue(username, forHTTPHeaderField: "username")
-//        request.addValue(password, forHTTPHeaderField: "password")
-//        request.addValue("Token f53bc11b9583f18ac20898c2e931efcc648339a3", forHTTPHeaderField: "Authorization")
-//
-//        request.httpMethod = "GET"
-//
-//
-//        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-//
-//          guard let data = data else {
-//            Helper.showAlert(viewController: self, title: "Oops", message: "Username or Password Incorrect")
-//            print(String(describing: error))
-//            semaphore.signal()
-//            return
-//          }
-//
-//          self.didLogin(userData: data)
-//          semaphore.signal()
-//        }
-//        task.resume()
-//        semaphore.wait()
-//
-//
-//    }
-        
     
     func disable() -> Void {
         passwordTextField.isEnabled = false
@@ -132,6 +108,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         do {
             //decode data into user object
             User.current = try JSONDecoder().decode(User.self, from: userData)
+            viewmodel.loadData()
             usernameTextField.text = ""
             passwordTextField.text = ""
             self.view.endEditing(false)

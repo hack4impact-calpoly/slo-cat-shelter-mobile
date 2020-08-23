@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Combine
 import Alamofire
 import UIKit
 import SwiftUI
+
+import Foundation
+import CoreData
+
 
 class dashboardViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
@@ -18,6 +23,7 @@ class dashboardViewController: UIViewController, UIPickerViewDataSource, UIPicke
         hostingController!.view.backgroundColor = UIColor.clear;
         return hostingController
     }
+    @ObservedObject var viewmodel = CatViewModel()
     
     //MARK: properties
     @IBOutlet weak var aptTypeSegCntrl: UISegmentedControl!
@@ -28,11 +34,16 @@ class dashboardViewController: UIViewController, UIPickerViewDataSource, UIPicke
     @IBOutlet weak var notesTextView: UITextView!
     @IBOutlet weak var catIDPickerView: UIPickerView!
     var data: [String] = [String]()
+    var catnames: [String] = [String]()
+    var selectedCatName = ""
+    var selectedCatid = 1
     
     override func viewDidLoad() {
+        viewmodel.loadData()
         super.viewDidLoad()
         self.catIDPickerView.delegate = self
         self.catIDPickerView.dataSource = self
+        
         
         //the following nasty code is to bump everything up so that the keyboard doesn't block input fields, and bump it back down when keyboard is gone
         aptTypeSegCntrl.selectedSegmentTintColor = UIColor(red: 0.53725, green: 0.7725490, blue: 0.46666666666, alpha: 1)
@@ -53,12 +64,34 @@ class dashboardViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return data.count
+        if (viewmodel.cats.count == 0) {
+            return 2
+        }
+        else
+        {
+            return self.catnames.count
+        }
     }
     
     //This function is what puts the data in each row, presuming data will have the cats in it
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return data[row]
+        if (viewmodel.cats.count == 0) {
+            self.catnames = ["Scroll to Select Cat", ""]
+        }
+        else
+        {
+            self.catnames=[]
+                for cat in (viewmodel.cats).sorted(by: {$0.name < $1.name}) {
+                self.catnames.append(cat.name)
+            }
+        }
+        return self.catnames[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.selectedCatName = self.catnames[row]
+        let selectedcat = viewmodel.cats.filter( { return $0.name == selectedCatName } )
+        self.selectedCatid = selectedcat[0].id ?? 1
+        catIDPickerView.reloadAllComponents()
     }
     
     @objc func dismissKeyboard (){
@@ -110,7 +143,8 @@ class dashboardViewController: UIViewController, UIPickerViewDataSource, UIPicke
             }
             
             let body = [
-                "cat_id": "test",
+                "cat_id": self.selectedCatid,
+                "name": self.selectedCatName,
                 "event_type": event_str,
                 "title": titleTextField.text!,
                 "date": "\(date_str)",

@@ -10,8 +10,6 @@ import Combine
 import Foundation
 
 class CatViewModel: ObservableObject {
-    //@Published var cats = CatList(results: [])
-    //@Published var cats = CatList(results: [])
     @Published var cats : CatList2 = []
     @Published var photos : Photos = []
     @Published var photoDict: [Int:PhotoElement] = [Int: PhotoElement]()
