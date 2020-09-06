@@ -28,6 +28,7 @@ struct CatRow : View {
                 Text(cat.name)
                     .foregroundColor(.init(red: 0.53725, green: 0.7725490, blue: 0.46666666666))
                     .lineLimit(nil)
+                .font(.custom("Euphemia UCAS", size: 14.0))
                 Spacer()
             }
             HStack {
@@ -35,10 +36,12 @@ struct CatRow : View {
                     Text("Status: \(cat.gender.rawValue)")
                         .foregroundColor(.gray)
                         .lineLimit(nil)
+                    .font(.custom("Euphemia UCAS", size: 14.0))
                     Spacer()
                 Text("Age: \(String(cat.age))")
                     .foregroundColor(.gray)
                     .lineLimit(nil)
+                    .font(.custom("Euphemia UCAS", size: 14.0))
                 Spacer()
                 }
             }
@@ -46,6 +49,7 @@ struct CatRow : View {
                 Text("Breed: \(cat.breed)")
                     .foregroundColor(.gray)
                     .lineLimit(nil)
+                .font(.custom("Euphemia UCAS", size: 14.0))
                 Spacer()
             }
             Spacer()
