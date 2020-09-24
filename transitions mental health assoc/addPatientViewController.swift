@@ -49,11 +49,10 @@ class addPatientViewController: UIViewController {
     }
     
     @IBAction func submitPressed(_ sender: Any) {
-        for datePicker in formDatePickers {
-            print(convertDateFormater(datePicker.date))
-        }
+        let successAlert = UIAlertController(title: "Success!", message: "Cat submitted successfully.", preferredStyle: .alert)
         let alert = UIAlertController(title: "Incomplete Form", message: "Please make sure all required fields are filled out", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        successAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         //check for text fields not being filled out
         for textField in formTextFields {
             if textField.text == "" {
@@ -94,20 +93,21 @@ class addPatientViewController: UIViewController {
             }
             if let data = data, let dataString = String(data: data, encoding: .utf8) {
                 print("Response data string:\n \(dataString)")
-                //self.clearFields()
             }
         }
         task.resume()
+        self.present(successAlert, animated: true)
+        clearFields()
     }
     
-//    func clearFields() {
-//        for textField in formTextFields {
-//            textField.text = ""
-//        }
-//        for textView in formTextViews {
-//            textView.text = ""
-//        }
-//    }
+    func clearFields() {
+        for textField in formTextFields {
+            textField.text = ""
+        }
+        for textView in formTextViews {
+            textView.text = ""
+        }
+    }
     
     func convertDateFormater(_ date: Date) -> String
     {

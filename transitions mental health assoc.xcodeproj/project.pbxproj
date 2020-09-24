@@ -12,8 +12,8 @@
 		09422EAF23C547EC00318C03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09422EAE23C547EC00318C03 /* SceneDelegate.swift */; };
 		09422EB123C547EC00318C03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09422EB023C547EC00318C03 /* ViewController.swift */; };
 		095813BD2446D1F10024DD5C /* addPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095813BC2446D1F10024DD5C /* addPatientViewController.swift */; };
+		09B70396251C2E39004B94E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09422EB223C547EC00318C03 /* Main.storyboard */; };
 		09C5111C24D3796400619BDD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5111B24D3796400619BDD /* TableViewCell.swift */; };
-		09C5111D24D383ED00619BDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09422EB223C547EC00318C03 /* Main.storyboard */; };
 		E4137118246BBE0500E3A2AF /* CatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4137117246BBE0500E3A2AF /* CatList.swift */; };
 		E413711A246BBE8F00E3A2AF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4137119246BBE8F00E3A2AF /* NetworkManager.swift */; };
 		E413711C246BC07800E3A2AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E413711B246BC07800E3A2AF /* ContentView.swift */; };
@@ -218,7 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09C5111D24D383ED00619BDD /* Main.storyboard in Resources */,
+				09B70396251C2E39004B94E0 /* Main.storyboard in Resources */,
 				E44D5E9F246A0BA800807EE5 /* Base.lproj in Resources */,
 				E4294A50246DAFBF00AC46AE /* icons8-kitty-50.png in Resources */,
 				E44D5EA2246A0BA800807EE5 /* Assets.xcassets in Resources */,

@@ -80,7 +80,7 @@ class dashboardViewController: UIViewController, UIPickerViewDataSource, UIPicke
         }
         else
         {
-            self.catnames=[]
+            self.catnames=["Volunteer"]
                 for cat in (viewmodel.cats).sorted(by: {$0.name < $1.name}) {
                 self.catnames.append(cat.name)
             }
@@ -88,10 +88,14 @@ class dashboardViewController: UIViewController, UIPickerViewDataSource, UIPicke
         return self.catnames[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.selectedCatName = self.catnames[row]
-        let selectedcat = viewmodel.cats.filter( { return $0.name == selectedCatName } )
-        self.selectedCatid = selectedcat[0].id ?? 1
-        catIDPickerView.reloadAllComponents()
+        if row != 0{
+            self.selectedCatName = self.catnames[row]
+            let selectedcat = viewmodel.cats.filter( { return $0.name == selectedCatName } )
+            self.selectedCatid = selectedcat[0].id ?? 1
+            catIDPickerView.reloadAllComponents()
+        } else {
+            self.selectedCatid = row
+        }
     }
     
     @objc func dismissKeyboard (){
