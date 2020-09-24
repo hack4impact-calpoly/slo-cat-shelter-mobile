@@ -18,12 +18,15 @@ import CoreData
 
 class dashboardViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+   
+    
     @IBSegueAction func ConnectEventList(_ coder: NSCoder) -> UIViewController? {
         let hostingController = UIHostingController(coder: coder, rootView: EventList())
         hostingController!.view.backgroundColor = UIColor.clear;
         return hostingController
     }
     @ObservedObject var viewmodel = CatViewModel()
+     @ObservedObject var eviewmodel = EventViewModel()
     
     //MARK: properties
     @IBOutlet weak var aptTypeSegCntrl: UISegmentedControl!
@@ -155,7 +158,8 @@ class dashboardViewController: UIViewController, UIPickerViewDataSource, UIPicke
                 "time": "\(time_str)",
                 "notes": notesTextView.text!
                 ] as [String : Any]
-            
+            viewmodel.loadData()
+            eviewmodel.loadData()
             AF.request("https://cpcp-cats.herokuapp.com/api/events/",method: .post, parameters: body, headers: headers).responseData {
                 response in switch response.result {
                 case .success(let data):
@@ -169,6 +173,8 @@ class dashboardViewController: UIViewController, UIPickerViewDataSource, UIPicke
                 case .failure(let error):
                     print("failure with response error: \(error)")
                 }
+               
+
             }
         } else {
             //alert not all fields filled out
@@ -176,5 +182,8 @@ class dashboardViewController: UIViewController, UIPickerViewDataSource, UIPicke
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: false)
         }
+        viewmodel.loadData()
+        eviewmodel.loadData()
+        
     }
 }

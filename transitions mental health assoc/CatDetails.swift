@@ -26,7 +26,7 @@ struct CatDetails : View {
                         HStack(alignment: .top) {
                             Group {
                                 VStack {
-                                Text(cat.name).font(.largeTitle)
+//                                Text(cat.name).font(.custom("Euphemia UCAS", size: 20.0))
                                     URLImage(URL(string:  "\(photos.photourl)")!, delay: 0.25) {proxy in proxy.image.resizable().aspectRatio(contentMode: .fit)
                                     .frame(width: 150, height: 150) }
 //                                    .resizable().frame(width: UIScreen.main.bounds.height/8, height: UIScreen.main.bounds.height/8) }
@@ -35,93 +35,93 @@ struct CatDetails : View {
                             }
                         }.padding(8)
                         HStack(alignment: .top) {
-                            Text("Age:").font(.subheadline).bold()
+                            Text("Age:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
                             Text(String(cat.age))
-                                .font(.subheadline)
+                                .font(.custom("Euphemia UCAS", size: 14.0))
                             Spacer()
                         }.padding(10).background(Color.white)
                         HStack(alignment: .top) {
-                            Text("Birthday:").font(.subheadline).bold()
+                            Text("Birthday:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
                             Text(String(cat.birthday))
-                                .font(.subheadline)
+                                .font(.custom("Euphemia UCAS", size: 14.0))
                             Spacer()
                         }.padding(10).background(Color.white)
                         HStack(alignment: .top) {
-                            Text("Gender:").font(.subheadline).bold()
-                            Text("\(cat.gender.rawValue)").font(.subheadline)
+                            Text("Gender:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
+                            Text("\(cat.gender.rawValue)").font(.custom("Euphemia UCAS", size: 14.0))
                             Spacer()
                         }.padding(10).background(Color.white)
                         HStack(alignment: .top) {
-                            Text("Description:").font(.subheadline).bold()
-                            Text(cat.catDescription).font(.subheadline)
+                            Text("Description:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
+                            Text(cat.catDescription).font(.custom("Euphemia UCAS", size: 14.0))
                             Spacer()
                         }
                         .padding(10).background(Color.white)
                         HStack(alignment: .top) {
-                            Text("Breed:").font(.subheadline).bold()
-                            Text(cat.breed).font(.subheadline)
+                            Text("Breed:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
+                            Text(cat.breed).font(.custom("Euphemia UCAS", size: 14.0))
                             Spacer()
                         }
                         .padding(10).background(Color.white)
                         HStack(alignment: .top) {
-                            Text("Type:").font(.subheadline).bold()
-                             Text("\(cat.itype.rawValue)").font(.subheadline)
-                                .font(.subheadline)
+                            Text("Type:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
+                             Text("\(cat.itype.rawValue)").font(.custom("Euphemia UCAS", size: 14.0))
+                               
                             Spacer()
                         }
                         .padding(10).background(Color.white)
                         HStack(alignment: .top) {
-                            Text("status:").font(.subheadline).bold()
-                             Text("\(cat.status.rawValue)").font(.subheadline)
+                            Text("status:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
+                             Text("\(cat.status.rawValue)").font(.custom("Euphemia UCAS", size: 14.0))
                             Spacer()
                         }
                         .padding(10).background(Color.white)
                         HStack(alignment: .top) {
-                            Text("Arrival Date:").font(.subheadline).bold()
+                            Text("Arrival Date:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
                             Text(String(cat.arrivalDate))
-                                .font(.subheadline)
+                                .font(.custom("Euphemia UCAS", size: 14.0))
                             Spacer()
                         }.padding(10).background(Color.white)
                     }
                 }
                 VStack(alignment: .center) {
                     HStack(alignment: .top) {
-                        Text("Arrival Details:").font(.subheadline).bold()
+                        Text("Arrival Details:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
                         Text(cat.arrivalDetails)
-                            .font(.subheadline)
+                           .font(.custom("Euphemia UCAS", size: 14.0))
                         Spacer()
                     }.padding(10).background(Color.white)
                 }
                 VStack(alignment: .center) {
                     Group {
                         HStack(alignment: .top) {
-                            Text("Medical History:").font(.subheadline).bold()
+                            Text("Medical History:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
                             Text(cat.medicalHistory)
-                                .font(.subheadline)
+                            .font(.custom("Euphemia UCAS", size: 14.0))
                             Spacer()
                         }.padding(10).background(Color.white)
                         HStack(alignment: .top) {
-                            Text("Vaccinations:").font(.subheadline).bold()
+                            Text("Vaccinations:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
                             Text(cat.vaccinations)
-                                .font(.subheadline)
+                                .font(.custom("Euphemia UCAS", size: 14.0))
                             Spacer()
                         }.padding(10).background(Color.white)
                         HStack(alignment: .top) {
-                            Text("Is Microchipped:").font(.subheadline).bold()
+                            Text("Is Microchipped:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
                             Text(String(cat.isMicrochipped))
-                                .font(.subheadline)
+                                .font(.custom("Euphemia UCAS", size: 14.0))
                             Spacer()
                         }.padding(10).background(Color.white)
                         HStack(alignment: .top) {
-                            Text("Flea Control Date:").font(.subheadline).bold()
+                            Text("Flea Control Date:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
                             Text(String(cat.fleaControlDate))
-                                .font(.subheadline)
+                               .font(.custom("Euphemia UCAS", size: 14.0))
                             Spacer()
                         }.padding(10).background(Color.white)
                         HStack(alignment: .top) {
-                            Text("Deworming Date:").font(.subheadline).bold()
+                            Text("Deworming Date:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
                             Text(String(cat.dewormingDate))
-                                .font(.subheadline)
+                                .font(.custom("Euphemia UCAS", size: 14.0))
                             Spacer()
                         }.padding(10).background(Color.white)
                     }
@@ -129,26 +129,26 @@ struct CatDetails : View {
                 VStack(alignment: .center) {
                     Group {
                         HStack(alignment: .top) {
-                            Text("FIV-FELV Date Tested:").font(.subheadline).bold()
+                            Text("FIV-FELV Date Tested:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
                             Text(cat.fivFelvDate)
-                                .font(.subheadline)
+                                .font(.custom("Euphemia UCAS", size: 14.0))
                             Spacer()
                         }.padding(10).background(Color.white)
                         HStack(alignment: .top) {
-                            Text("Special Needs:").font(.subheadline).bold()
+                            Text("Special Needs:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
                             if cat.specialNeeds != nil {
                                 Text(cat.specialNeeds!)
-                                    .font(.subheadline)
+                                   .font(.custom("Euphemia UCAS", size: 14.0))
                             }
                             Spacer()
                         }.padding(10).background(Color.white)
                         HStack(alignment: .top) {
                             Group{
-                                Text("Personality:").font(.subheadline).bold()
+                                Text("Personality:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
                                 VStack (alignment: .leading){
                                     ForEach(cat.personality, id: \.self) { p in
                                         VStack (alignment: .trailing){
-                                            Text(String(self.personalityData[Int(p)] ?? "")).font(.subheadline)
+                                            Text(String(self.personalityData[Int(p)] ?? "")).font(.custom("Euphemia UCAS", size: 14.0))
                                         }
                                     }
                                 }
@@ -157,28 +157,28 @@ struct CatDetails : View {
                         }.padding(10).background(Color.white)
                         //  .padding(7)
                         HStack(alignment: .top) {
-                            Text("More Personality:").font(.subheadline).bold()
+                            Text("More Personality:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
                             if cat.specialNeeds != nil {
                                 Text(cat.morePersonality!)
-                                    .font(.subheadline)
+                                  .font(.custom("Euphemia UCAS", size: 14.0))
                             }
                             Spacer()
                         }.padding(10).background(Color.white)
                         // .padding(7)
                         HStack(alignment: .top) {
-                            Text("Comments:").font(.subheadline).bold()
+                            Text("Comments:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
                             if cat.specialNeeds != nil {
                                 Text(cat.comments!)
-                                    .font(.subheadline)
+                                    .font(.custom("Euphemia UCAS", size: 14.0))
                             }
                             Spacer()
                         }.padding(10).background(Color.white)
                         // .padding(7)
                         HStack(alignment: .top) {
-                            Text("Personal Experiences:").font(.subheadline).bold()
+                            Text("Personal Experiences:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
                             if cat.specialNeeds != nil {
                                 Text(cat.personalExp!)
-                                    .font(.subheadline)
+                                    .font(.custom("Euphemia UCAS", size: 14.0))
                             }
                             Spacer()
                         }.padding(10).background(Color.white)
@@ -188,7 +188,7 @@ struct CatDetails : View {
             }
         }
         .padding()
-        .navigationBarTitle(Text(cat.name), displayMode: .inline)
+        .navigationBarTitle(Text(cat.name).font(.custom("Euphemia UCAS", size: 20.0)), displayMode: .inline)
             // .background(Color.bluecat.opacity(0.3)) 95,169,218
             .background(Color(red: 0.7215686, green: 0.917647, blue: 0.6888888))
             .edgesIgnoringSafeArea(.all)
