@@ -46,6 +46,7 @@ class dashboardViewController: UIViewController, UIPickerViewDataSource, UIPicke
         super.viewDidLoad()
         self.catIDPickerView.delegate = self
         self.catIDPickerView.dataSource = self
+        catIDPickerView.reloadAllComponents()
         
         
         //the following nasty code is to bump everything up so that the keyboard doesn't block input fields, and bump it back down when keyboard is gone
@@ -80,9 +81,13 @@ class dashboardViewController: UIViewController, UIPickerViewDataSource, UIPicke
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if (viewmodel.cats.count == 0) {
             self.catnames = ["Scroll to Select Cat", "Volunteer"]
+            self.eviewmodel.loadData()
+            self.viewmodel.loadData()
         }
         else
         {
+            self.eviewmodel.loadData()
+            self.viewmodel.loadData()
             self.catnames=["Volunteer"]
                 for cat in (viewmodel.cats).sorted(by: {$0.name < $1.name}) {
                 self.catnames.append(cat.name)

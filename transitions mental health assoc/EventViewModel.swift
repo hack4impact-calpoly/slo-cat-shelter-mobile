@@ -58,7 +58,7 @@ struct EventList : View {
     @ObservedObject var eviewmodel = EventViewModel()
     
     @ObservedObject var viewmodel = CatViewModel()
-    
+  
     @State var refreshnow: String = "Refresh"
     
     func timeToRefresh()
@@ -72,6 +72,8 @@ struct EventList : View {
         }
         self.eviewmodel.loadData()
         self.viewmodel.loadData()
+        
+        
     }
     
     var body: some View {
