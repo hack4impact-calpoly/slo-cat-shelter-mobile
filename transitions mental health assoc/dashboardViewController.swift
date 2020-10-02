@@ -79,7 +79,7 @@ class dashboardViewController: UIViewController, UIPickerViewDataSource, UIPicke
     //This function is what puts the data in each row, presuming data will have the cats in it
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if (viewmodel.cats.count == 0) {
-            self.catnames = ["Scroll to Select Cat", ""]
+            self.catnames = ["Scroll to Select Cat", "Volunteer"]
         }
         else
         {
@@ -91,15 +91,19 @@ class dashboardViewController: UIViewController, UIPickerViewDataSource, UIPicke
         return self.catnames[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if row != 0{
-            self.selectedCatName = self.catnames[row]
-            let selectedcat = viewmodel.cats.filter( { return $0.name == selectedCatName } )
-            self.selectedCatid = selectedcat[0].id ?? 1
-            catIDPickerView.reloadAllComponents()
-        } else {
-            self.selectedCatid = row
+            if row != 0{
+                self.selectedCatName = self.catnames[row]
+                let selectedcat = viewmodel.cats.filter( { return $0.name == selectedCatName } )
+                if viewmodel.cats.count > 0 {
+                    self.selectedCatid = selectedcat[0].id ?? 1
+                } else {
+                    self.selectedCatid = 0
+                }
+                catIDPickerView.reloadAllComponents()
+            } else {
+                self.selectedCatid = row
+            }
         }
-    }
     
     @objc func dismissKeyboard (){
         view.endEditing(true)
