@@ -439,8 +439,8 @@
 			baseConfigurationReference = E20AC55CC30DDB45247FCBE8 /* Pods-transitions mental health assoc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6H9677DJJ9;
 				INFOPLIST_FILE = "transitions mental health assoc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
@@ -450,7 +450,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CPCP.calpolycatprogram;
 				PRODUCT_NAME = CPCP;
-				PROVISIONING_PROFILE_SPECIFIER = com.CPCP.CalPolyCatProgram;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -461,8 +461,8 @@
 			baseConfigurationReference = 519CF78D93E47395CE52865D /* Pods-transitions mental health assoc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6H9677DJJ9;
 				INFOPLIST_FILE = "transitions mental health assoc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
@@ -472,7 +472,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CPCP.calpolycatprogram;
 				PRODUCT_NAME = CPCP;
-				PROVISIONING_PROFILE_SPECIFIER = com.CPCP.CalPolyCatProgram;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
