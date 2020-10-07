@@ -441,7 +441,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 6H9677DJJ9;
 				INFOPLIST_FILE = "transitions mental health assoc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
@@ -465,7 +465,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 6H9677DJJ9;
 				INFOPLIST_FILE = "transitions mental health assoc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
