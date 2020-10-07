@@ -28,12 +28,17 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Check if we are logged in on load
+        usernameTextField.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        passwordTextField.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         loginbutton.backgroundColor = UIColor(red: 0.53725, green: 0.7725490, blue: 0.46666666666, alpha: 1)
         loginbutton.layer.cornerRadius = 5.0
         enable()
         if let data = UserDefaults.standard.data(forKey: "user") {
             didLogin(userData: data)
         }
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
     
     //function for login button press, checks if textfields are filled out
