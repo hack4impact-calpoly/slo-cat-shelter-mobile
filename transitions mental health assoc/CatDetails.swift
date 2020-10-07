@@ -71,7 +71,7 @@ struct CatDetails : View {
                         }
                         .padding(10).background(Color.white)
                         HStack(alignment: .top) {
-                            Text("status:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
+                            Text("Status:").font(.custom("Euphemia UCAS", size: 14.0)).bold()
                              Text("\(cat.status.rawValue)").font(.custom("Euphemia UCAS", size: 14.0))
                             Spacer()
                         }
