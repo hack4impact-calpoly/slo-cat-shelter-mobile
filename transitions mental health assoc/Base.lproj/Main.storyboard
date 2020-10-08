@@ -113,8 +113,8 @@
                                     <segue destination="ENw-R5-EJh" kind="embed" id="hba-9j-n2b"/>
                                 </connections>
                             </containerView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="pvQ-px-q5N">
-                                <rect key="frame" x="34.5" y="89" width="345" height="85"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pvQ-px-q5N">
+                                <rect key="frame" x="59.5" y="89" width="295" height="85"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hb7-Pa-chV">
                                         <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
@@ -145,7 +145,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rIF-KK-Ime">
-                                        <rect key="frame" x="130" y="0.0" width="85" height="85"/>
+                                        <rect key="frame" x="105" y="0.0" width="85" height="85"/>
                                         <color key="backgroundColor" red="0.4424934089" green="0.78450930119999995" blue="0.89219754929999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="85" id="0hK-9N-Zyg"/>
@@ -174,7 +174,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ct2-1L-qw8">
-                                        <rect key="frame" x="260" y="0.0" width="85" height="85"/>
+                                        <rect key="frame" x="210" y="0.0" width="85" height="85"/>
                                         <color key="backgroundColor" red="0.4424934089" green="0.78450930119999995" blue="0.89219754929999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="85" id="405-Jp-ETD"/>
