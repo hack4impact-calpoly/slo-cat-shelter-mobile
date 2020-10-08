@@ -37,9 +37,30 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
             didLogin(userData: data)
         }
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        let tap2 = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap2)
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= (keyboardSize.height - 150)
+            }
+            
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+    
     
     //function for login button press, checks if textfields are filled out
     @IBAction func loginButtonPress(_ sender: Any) {
